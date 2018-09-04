@@ -1,0 +1,75 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+use_frameworks!
+
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+def downgrade_swift
+
+    post_install do |installer|
+
+        installer.pods_project.build_configurations.each do |config|
+            config.build_settings.delete('CODE_SIGNING_ALLOWED')
+            config.build_settings.delete('CODE_SIGNING_REQUIRED')
+        end
+
+        incompatiblePods = ['Cartography']
+        installer.pods_project.targets.each do |target|
+            if incompatiblePods.include? target.name
+                target.build_configurations.each do |config|
+                    config.build_settings['SWIFT_VERSION'] = '4.0'
+#                    config.build_settings['CONFIGURATION_BUILD_DIR'] = '$PODS_CONFIGURATION_BUILD_DIR'
+                end
+            end
+        end
+    end
+end
+
+target '___VARIABLE_productName___' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+
+
+  pod "Cartography"
+  pod "ReactiveSwift"
+  pod "ReactiveCocoa"
+  pod "Result"
+  pod "SwiftyStoreKit"
+  pod "MBProgressHUD"
+  # Pods for Chesterfield
+  
+  end
+
+target '___VARIABLE_productName___Tests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod "Cartography"
+    pod "ReactiveSwift"
+    pod "ReactiveCocoa"
+    pod "Result"
+    pod "SwiftyStoreKit"
+    pod "MBProgressHUD"
+end
+
+
+target '___VARIABLE_productName___Framework' do
+
+    pod "Cartography"
+   pod "ReactiveCocoa"
+   pod "ReactiveSwift"
+   pod "Result"
+   pod "MBProgressHUD"
+   pod "SwiftyStoreKit"
+    downgrade_swift
+
+end
+
+target '___VARIABLE_productName___Api' do
+    
+    pod "Cartography"
+    pod "ReactiveCocoa"
+    pod "ReactiveSwift"
+    pod "Result"
+    pod "SwiftyStoreKit"
+    
+end
