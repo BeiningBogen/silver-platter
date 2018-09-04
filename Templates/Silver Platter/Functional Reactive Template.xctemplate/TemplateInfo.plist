@@ -2,21 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Targets</key>
-	<array>
-		<dict>
-			<key>Frameworks</key>
-			<array>
-				<string>GrrApi</string>
-			</array>
-		</dict>
-	</array>
 	<key>Nodes</key>
 	<array>
 		<string>../Podfile</string>
 		<string>example/ExampleViewModel.swift</string>
 		<string>example/ExampleViewController.swift</string>
 		<string>example/ExampleViewModelTests.swift</string>
+		<string>example/ExampleViewController.playground</string>
 	</array>
 	<key>Kind</key>
 	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
@@ -86,6 +78,13 @@
 			<array>
 				<string>lolTarget</string>
 			</array>
+		</dict>
+		<key>example/ExampleViewController.playground</key>
+		<dict>
+			<key>Group</key>
+			<string>example</string>
+			<key>Path</key>
+			<string>example/ExampleViewController.playground</string>
 		</dict>
 		<key>Base.lproj/Main.storyboard</key>
 		<dict>
