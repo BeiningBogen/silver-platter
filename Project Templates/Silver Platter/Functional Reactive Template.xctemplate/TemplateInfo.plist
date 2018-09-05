@@ -33,6 +33,8 @@
 			<string>___PACKAGENAME___Framework</string>
 			<key>TargetType</key>
 			<string>Aggregate</string>
+			<key>ProductType</key>
+			<string>com.apple.product-type.framework</string>
 			<key>SharedSettings</key>
 			<dict>
 				<key>PRODUCT_NAME</key>
@@ -53,6 +55,8 @@
 			</array>
 		</dict>
 		<dict>
+			<key>ProductType</key>
+			<string>com.apple.product-type.framework</string>
 			<key>Name</key>
 			<string>___PACKAGENAME___Api</string>
 			<key>TargetType</key>
