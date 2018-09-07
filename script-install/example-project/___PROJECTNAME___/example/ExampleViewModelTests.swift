@@ -20,6 +20,7 @@ class ExampleViewModelTests: XCTestCase {
     let goBack = TestObserver<Void, NoError>()
 
     override func setUp() {
+        super.setUp()
         storeViewModel.outputs.goBack.observe(goBack.observer)
     }
 

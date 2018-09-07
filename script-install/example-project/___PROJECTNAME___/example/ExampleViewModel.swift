@@ -12,6 +12,7 @@ import Result
 
 public protocol ExampleViewModelInputs {
     func viewDidLoad()
+    func configure(text:String)
 }
 
 public protocol ExampleViewModelOutputs {
@@ -26,15 +27,21 @@ public protocol ExampleViewModelType {
 public class ExampleViewModel: ExampleViewModelType, ExampleViewModelInputs, ExampleViewModelOutputs {
     init() {
         goBack = .empty
+        configureWithTextProperty = .empty
     }
-    
+
     let viewDidLoadProperty = MutableProperty(())
     public func viewDidLoad() {
         viewDidLoadProperty.value = ()
     }
-    
+
+    let configureWithTextProperty = MutableProperty<String?>(nil)
+    public func configure(text: String) {
+        configureWithSubjectProperty.value = text
+    }
+
     public let goBack: Signal<Void, NoError>
-    
+
     public var inputs: StoreViewModelInputs { return self }
     public var outputs: StoreViewModelOutputs { return self }
 }

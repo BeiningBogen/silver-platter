@@ -3,7 +3,7 @@ PROJECT_NAME = test-project
 PROJECT_DIR = $(DOCUMENTS_DIR)/$(PROJECT_NAME)
 EXAMPLE_PROJECT = example-project
 
-GENERATED_PROJECT_NAME = Example
+GENERATED_PROJECT_NAME = Lol
 
 install:
 	rm -rf $(PROJECT_DIR)
