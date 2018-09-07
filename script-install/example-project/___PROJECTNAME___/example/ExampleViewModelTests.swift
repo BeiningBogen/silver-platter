@@ -11,8 +11,8 @@ import ReactiveCocoa
 import ReactiveSwift
 import Result
 
-@testable import ___VARIABLE_productName___Framework
-@testable import ___VARIABLE_productName___Api
+@testable import ___PROJECTNAME___Framework
+@testable import ___PROJECTNAME___Api
 
 class ExampleViewModelTests: XCTestCase {
 
@@ -21,13 +21,13 @@ class ExampleViewModelTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        storeViewModel.outputs.goBack.observe(goBack.observer)
+        exampleViewModel.outputs.goBack.observe(goBack.observer)
     }
 
     override func tearDown() {}
 
     func testGoBack() {
-        storeViewModel.inputs.closeTapped()
+        exampleViewModel.inputs.closeTapped()
         goBack.assertDidEmitValue()
     }
 }

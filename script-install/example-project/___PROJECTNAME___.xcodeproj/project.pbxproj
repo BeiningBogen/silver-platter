@@ -19,12 +19,11 @@
 		0A5C92972112FEEF00F7C7B0 /* TestObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B51572112F94E009C0EAA /* TestObserver.swift */; };
 		0A774B2820FE2F3A00B83EFE /* OperatorOverload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A774B2720FE2F3A00B83EFE /* OperatorOverload.swift */; };
 		F11FF8A4213981B200344836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EBB1820DCE97D00B7D41D /* AppDelegate.swift */; };
-		F154C2332141468F0097F93A /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F154C22F2141468F0097F93A /* ExampleViewModel.swift */; };
-		F154C2342141468F0097F93A /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F154C2302141468F0097F93A /* ExampleViewController.swift */; };
-		F154C2352141468F0097F93A /* ExampleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F154C2312141468F0097F93A /* ExampleViewModelTests.swift */; };
+		F166CDEC21429D70002D1D60 /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DAC3FD21429AA100801657 /* ExampleViewModel.swift */; };
+		F166CDED21429D78002D1D60 /* ExampleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DAC3FC21429AA100801657 /* ExampleViewModelTests.swift */; };
 		F176396621243DD400EDFC91 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A550C7720F62B2700F69F67 /* Service.swift */; };
 		F17F5C6D2134333A0082A36F /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A550C7C20F62B2700F69F67 /* MockService.swift */; };
-		F17F5C6F213436EC0082A36F /* Requestable+completionhandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A029E2B21272A9B00A89FCC /* Requestable+completionhandler.swift */; };
+		F1DAC40321429AC300801657 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DAC3FB21429AA100801657 /* ExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +32,7 @@
 			containerPortal = 0A3EBB0D20DCE97D00B7D41D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0A22B2C120E586A0008E1F35;
-			remoteInfo = ___PROJECTNAME___Api;
+			remoteInfo = "___PROJECTNAME___Api";
 		};
 		0A22B2F820E586C5008E1F35 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,9 +64,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0A029E2B21272A9B00A89FCC /* Requestable+completionhandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Requestable+completionhandler.swift"; sourceTree = "<group>"; };
 		0A1B51572112F94E009C0EAA /* TestObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObserver.swift; sourceTree = "<group>"; };
-		0A22B2E720E586C4008E1F35 /* ___PROJECTNAME___Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ___PROJECTNAME___Framework.h; sourceTree = "<group>"; };
+		0A22B2E720E586C4008E1F35 /* ___PROJECTNAME___Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "___PROJECTNAME___Framework.h"; sourceTree = "<group>"; };
 		0A22B2E820E586C4008E1F35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3EBB1820DCE97D00B7D41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A3EBB2220DCE97F00B7D41D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,21 +75,21 @@
 		0A550C7520F62B2700F69F67 /* ServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
 		0A550C7620F62B2700F69F67 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		0A550C7720F62B2700F69F67 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		0A550C7920F62B2700F69F67 /* ___PROJECTNAME___Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ___PROJECTNAME___Api.h; sourceTree = "<group>"; };
+		0A550C7920F62B2700F69F67 /* ___PROJECTNAME___Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "___PROJECTNAME___Api.h"; sourceTree = "<group>"; };
 		0A550C7A20F62B2700F69F67 /* Requestables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestables.swift; sourceTree = "<group>"; };
 		0A550C7B20F62B2700F69F67 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A550C7C20F62B2700F69F67 /* MockService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		0A6F45F520F9EFC60062D5BE /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		0A6F45F720F9F0420062D5BE /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		0A774B2720FE2F3A00B83EFE /* OperatorOverload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorOverload.swift; sourceTree = "<group>"; };
-		F154C22F2141468F0097F93A /* ExampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExampleViewModel.swift; path = ../example/ExampleViewModel.swift; sourceTree = "<group>"; };
-		F154C2302141468F0097F93A /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExampleViewController.swift; path = ../example/ExampleViewController.swift; sourceTree = "<group>"; };
-		F154C2312141468F0097F93A /* ExampleViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExampleViewModelTests.swift; path = ../example/ExampleViewModelTests.swift; sourceTree = "<group>"; };
-		F154C2322141468F0097F93A /* ExampleViewController.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = ExampleViewController.playground; path = ../example/ExampleViewController.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		F176F623214268290094BB29 /* ___PROJECTNAME___.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ___PROJECTNAME___.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F176F624214268290094BB29 /* ___PROJECTNAME___Api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ___PROJECTNAME___Api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F176F625214268290094BB29 /* ___PROJECTNAME___Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ___PROJECTNAME___Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F176F626214268290094BB29 /* ___PROJECTNAME___Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ___PROJECTNAME___Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F176F623214268290094BB29 /* ___PROJECTNAME___.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "___PROJECTNAME___.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F176F624214268290094BB29 /* ___PROJECTNAME___Api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "___PROJECTNAME___Api.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F176F625214268290094BB29 /* ___PROJECTNAME___Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "___PROJECTNAME___Framework.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F176F626214268290094BB29 /* ___PROJECTNAME___Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "___PROJECTNAME___Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1DAC3FB21429AA100801657 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		F1DAC3FC21429AA100801657 /* ExampleViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModelTests.swift; sourceTree = "<group>"; };
+		F1DAC3FD21429AA100801657 /* ExampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
+		F1DAC3FE21429AA100801657 /* ExampleViewController.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ExampleViewController.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +131,7 @@
 				0A22B2E720E586C4008E1F35 /* ___PROJECTNAME___Framework.h */,
 				0A22B2E820E586C4008E1F35 /* Info.plist */,
 			);
-			path = ___PROJECTNAME___Framework;
+			path = "___PROJECTNAME___Framework";
 			sourceTree = "<group>";
 		};
 		0A3EBB0C20DCE97D00B7D41D = {
@@ -153,13 +151,13 @@
 		0A3EBB1720DCE97D00B7D41D /* ___PROJECTNAME___ */ = {
 			isa = PBXGroup;
 			children = (
-				F154C22E214131650097F93A /* example */,
+				F1DAC40221429AA700801657 /* example */,
 				0A3EBB1820DCE97D00B7D41D /* AppDelegate.swift */,
 				0A3EBB2220DCE97F00B7D41D /* Assets.xcassets */,
 				0A3EBB2420DCE97F00B7D41D /* LaunchScreen.storyboard */,
 				0A3EBB2720DCE97F00B7D41D /* Info.plist */,
 			);
-			path = ___PROJECTNAME___;
+			path = "___PROJECTNAME___";
 			sourceTree = "<group>";
 		};
 		0A3EBB2F20DCE97F00B7D41D /* ___PROJECTNAME___Tests */ = {
@@ -169,7 +167,7 @@
 				0A42D3EE2114390A000CD37C /* Helpers */,
 				0A3EBB3220DCE97F00B7D41D /* Info.plist */,
 			);
-			path = ___PROJECTNAME___Tests;
+			path = "___PROJECTNAME___Tests";
 			sourceTree = "<group>";
 		};
 		0A42D3EE2114390A000CD37C /* Helpers */ = {
@@ -187,7 +185,7 @@
 				0A550C7B20F62B2700F69F67 /* Info.plist */,
 				F17F5C6E213436D70082A36F /* network */,
 			);
-			path = ___PROJECTNAME___Api;
+			path = "___PROJECTNAME___Api";
 			sourceTree = "<group>";
 		};
 		0A6F45F420F9EF8B0062D5BE /* Library */ = {
@@ -200,28 +198,26 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
-		F154C22E214131650097F93A /* example */ = {
-			isa = PBXGroup;
-			children = (
-				F154C2322141468F0097F93A /* ExampleViewController.playground */,
-				F154C2302141468F0097F93A /* ExampleViewController.swift */,
-				F154C22F2141468F0097F93A /* ExampleViewModel.swift */,
-				F154C2312141468F0097F93A /* ExampleViewModelTests.swift */,
-			);
-			name = example;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		F17F5C6E213436D70082A36F /* network */ = {
 			isa = PBXGroup;
 			children = (
 				0A550C7620F62B2700F69F67 /* Requestable.swift */,
-				0A029E2B21272A9B00A89FCC /* Requestable+completionhandler.swift */,
 				0A550C7A20F62B2700F69F67 /* Requestables.swift */,
 				0A550C7720F62B2700F69F67 /* Service.swift */,
 				0A550C7520F62B2700F69F67 /* ServiceType.swift */,
 			);
 			path = network;
+			sourceTree = "<group>";
+		};
+		F1DAC40221429AA700801657 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				F1DAC3FB21429AA100801657 /* ExampleViewController.swift */,
+				F1DAC3FD21429AA100801657 /* ExampleViewModel.swift */,
+				F1DAC3FC21429AA100801657 /* ExampleViewModelTests.swift */,
+				F1DAC3FE21429AA100801657 /* ExampleViewController.playground */,
+			);
+			path = example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +256,8 @@
 			);
 			dependencies = (
 			);
-			name = ___PROJECTNAME___Api;
-			productName = ___PROJECTNAME___Api;
+			name = "___PROJECTNAME___Api";
+			productName = "___PROJECTNAME___Api";
 			productReference = F176F624214268290094BB29 /* ___PROJECTNAME___Api.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -279,8 +275,8 @@
 			);
 			dependencies = (
 			);
-			name = ___PROJECTNAME___Framework;
-			productName = ___PROJECTNAME___Framework;
+			name = "___PROJECTNAME___Framework";
+			productName = "___PROJECTNAME___Framework";
 			productReference = F176F625214268290094BB29 /* ___PROJECTNAME___Framework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -301,8 +297,8 @@
 				0A22B2D620E586A0008E1F35 /* PBXTargetDependency */,
 				0A22B2F920E586C5008E1F35 /* PBXTargetDependency */,
 			);
-			name = ___PROJECTNAME___;
-			productName = ___PROJECTNAME___;
+			name = "___PROJECTNAME___";
+			productName = "___PROJECTNAME___";
 			productReference = F176F623214268290094BB29 /* ___PROJECTNAME___.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -321,8 +317,8 @@
 			dependencies = (
 				0A3EBB2E20DCE97F00B7D41D /* PBXTargetDependency */,
 			);
-			name = ___PROJECTNAME___Tests;
-			productName = ___PROJECTNAME___Tests;
+			name = "___PROJECTNAME___Tests";
+			productName = "___PROJECTNAME___Tests";
 			productReference = F176F626214268290094BB29 /* ___PROJECTNAME___Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -546,7 +542,6 @@
 				F176396621243DD400EDFC91 /* Service.swift in Sources */,
 				0A550C7D20F62B2700F69F67 /* ServiceType.swift in Sources */,
 				F17F5C6D2134333A0082A36F /* MockService.swift in Sources */,
-				F17F5C6F213436EC0082A36F /* Requestable+completionhandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,7 +549,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F166CDEC21429D70002D1D60 /* ExampleViewModel.swift in Sources */,
 				0A774B2820FE2F3A00B83EFE /* OperatorOverload.swift in Sources */,
+				F1DAC40321429AC300801657 /* ExampleViewController.swift in Sources */,
 				0A58AF7520FCE5080076F604 /* Environment.swift in Sources */,
 				0A58AF7420FCE5080076F604 /* AppEnvironment.swift in Sources */,
 			);
@@ -565,9 +562,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F11FF8A4213981B200344836 /* AppDelegate.swift in Sources */,
-				F154C2352141468F0097F93A /* ExampleViewModelTests.swift in Sources */,
-				F154C2332141468F0097F93A /* ExampleViewModel.swift in Sources */,
-				F154C2342141468F0097F93A /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A5C92972112FEEF00F7C7B0 /* TestObserver.swift in Sources */,
+				F166CDED21429D78002D1D60 /* ExampleViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,14 +617,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ___PROJECTNAME___Api/Info.plist;
+				INFOPLIST_FILE = "___PROJECTNAME___Api/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = beiningbogen.___PROJECTNAME___Api;
+				PRODUCT_BUNDLE_IDENTIFIER = "beiningbogen.___PROJECTNAME___Api";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -650,14 +645,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ___PROJECTNAME___Api/Info.plist;
+				INFOPLIST_FILE = "___PROJECTNAME___Api/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = beiningbogen.___PROJECTNAME___Api;
+				PRODUCT_BUNDLE_IDENTIFIER = "beiningbogen.___PROJECTNAME___Api";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -678,14 +673,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ___PROJECTNAME___Framework/Info.plist;
+				INFOPLIST_FILE = "___PROJECTNAME___Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = beiningbogen.___PROJECTNAME___Framework;
+				PRODUCT_BUNDLE_IDENTIFIER = "beiningbogen.___PROJECTNAME___Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -706,14 +701,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ___PROJECTNAME___Framework/Info.plist;
+				INFOPLIST_FILE = "___PROJECTNAME___Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = beiningbogen.___PROJECTNAME___Framework;
+				PRODUCT_BUNDLE_IDENTIFIER = "beiningbogen.___PROJECTNAME___Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -844,13 +839,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5PKTA338CL;
-				INFOPLIST_FILE = ___PROJECTNAME___/Info.plist;
+				INFOPLIST_FILE = "___PROJECTNAME___/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = beiningbogen.___PROJECTNAME___;
+				PRODUCT_BUNDLE_IDENTIFIER = "beiningbogen.___PROJECTNAME___";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -864,13 +859,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5PKTA338CL;
-				INFOPLIST_FILE = ___PROJECTNAME___/Info.plist;
+				INFOPLIST_FILE = "___PROJECTNAME___/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = beiningbogen.___PROJECTNAME___;
+				PRODUCT_BUNDLE_IDENTIFIER = "beiningbogen.___PROJECTNAME___";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -884,13 +879,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5PKTA338CL;
-				INFOPLIST_FILE = ___PROJECTNAME___Tests/Info.plist;
+				INFOPLIST_FILE = "___PROJECTNAME___Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = beiningbogen.___PROJECTNAME___Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = "beiningbogen.___PROJECTNAME___Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -905,13 +900,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5PKTA338CL;
-				INFOPLIST_FILE = ___PROJECTNAME___Tests/Info.plist;
+				INFOPLIST_FILE = "___PROJECTNAME___Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = beiningbogen.___PROJECTNAME___Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = "beiningbogen.___PROJECTNAME___Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -18,9 +18,4 @@ public struct Service : ServiceType {
     public init(serverConfig: ServerConfig = .local) {
         self.serverConfig = serverConfig
     }
-
-    public func getSubject(path: Requests.GetSubjectRequestable.Path) -> SignalProducer<Requests.GetSubjectRequestable.Response, RequestableError> {
-        return Requests.GetSubjectRequestable.request(serverConfig: self.serverConfig, path: path)
-
-    }
 }

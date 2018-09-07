@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ___PROJECTNAME___
+import ___PROJECTNAME___Api
 
 public struct Environment {
     

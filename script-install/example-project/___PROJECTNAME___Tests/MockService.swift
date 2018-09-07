@@ -32,24 +32,5 @@ public struct MockService : ServiceType {
         self.serverConfig = serverConfig
         
     }
-    
-    public func purchaseSubscription(type: AppType) -> SignalProducer<Void, RequestableError> {
-        
-        MockService.lastPerformedRequest = type
-        
-        if let _ = purchaseSubscriptionResponse {
-            return SignalProducer.init(value: ()).delay(0.1, on: QueueScheduler.init())
-        } else if let error = purchaseSubscriptionError {
-            return SignalProducer.init(error: error).delay(0.1, on: QueueScheduler.init())
-        }
-        
-
-        return .empty
-        
-    }
-
-    public func getSubject(path: Requests.GetSubjectRequestable.Path) -> SignalProducer<Requests.GetSubjectRequestable.Response, RequestableError> {
-        return .empty
-    }
 
 }

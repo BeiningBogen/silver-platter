@@ -13,6 +13,7 @@ import Result
 public protocol ExampleViewModelInputs {
     func viewDidLoad()
     func configure(text:String)
+    func closeTapped()
 }
 
 public protocol ExampleViewModelOutputs {
@@ -26,8 +27,7 @@ public protocol ExampleViewModelType {
 
 public class ExampleViewModel: ExampleViewModelType, ExampleViewModelInputs, ExampleViewModelOutputs {
     init() {
-        goBack = .empty
-        configureWithTextProperty = .empty
+        goBack = closeTappedProperty.signal
     }
 
     let viewDidLoadProperty = MutableProperty(())
@@ -37,11 +37,16 @@ public class ExampleViewModel: ExampleViewModelType, ExampleViewModelInputs, Exa
 
     let configureWithTextProperty = MutableProperty<String?>(nil)
     public func configure(text: String) {
-        configureWithSubjectProperty.value = text
+        configureWithTextProperty.value = text
+    }
+    
+    let closeTappedProperty = MutableProperty(())
+    public func closeTapped() {
+        closeTappedProperty.value = ()
     }
 
     public let goBack: Signal<Void, NoError>
 
-    public var inputs: StoreViewModelInputs { return self }
-    public var outputs: StoreViewModelOutputs { return self }
+    public var inputs: ExampleViewModelInputs { return self }
+    public var outputs: ExampleViewModelOutputs { return self }
 }
