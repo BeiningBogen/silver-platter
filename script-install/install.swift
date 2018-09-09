@@ -12,25 +12,23 @@ func shell(_ args: String...) -> Int32 {
     return task.terminationStatus
 }
 
-func generateMakefile() {
-
-}
-
 let exampleProject = "example-project"
 
-print("Repository name:")
-let repository = readLine()!
+//print("Repository name:")
+let repository = "Grr"//readLine()!
 
-print("Author name:")
-let author = readLine()!
+//print("Author name:")
+let author = "Simen Fonnes"//readLine()!
 
-print("Path:")
-let path = readLine()!
+//print("Path:")
+let path = "~/Documents"//readLine()!
 
 //Should check for correct / usage.
 let projectPath = "\(path)/\(repository)"
 
-print(projectPath)
+//print(projectPath)
+
+shell("mkdir", "~", "Documents", "Grr")
 
 //shell("rm -rf", projectPath)
 
