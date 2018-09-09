@@ -32,7 +32,7 @@ let projectPath = "\(path)/\(repository)"
 
 print(projectPath)
 
-shell("rm -rf", projectPath)
+//shell("rm -rf", projectPath)
 
 
 
