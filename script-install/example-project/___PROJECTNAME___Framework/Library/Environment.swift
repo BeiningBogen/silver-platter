@@ -1,16 +1,8 @@
-//
-//  Environment].swift
-//  CFApi
-//
-//  Created by Håkon Bogen on 14/07/2018,28.
-//  Copyright © 2018 Beining & Bogen. All rights reserved.
-//
-
 import Foundation
 import ___PROJECTNAME___Api
 
 public struct Environment {
-    
+
     // Endpoint towards
     public let apiService: ServiceType
 

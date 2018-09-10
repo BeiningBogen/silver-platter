@@ -1,11 +1,3 @@
-//
-//  OperatorOverloads.swift
-//  DatekSDK
-//
-//  Created by Håkon Bogen on 07/09/2017.
-//  Copyright © 2017 Håkon Bogen. All rights reserved.
-//
-
 import Foundation
 precedencegroup LeftApplyPrecedence {
     associativity: left
@@ -34,11 +26,11 @@ public func |><A, B>(a: A, f: (A) -> B) -> B {
 
 // swiftlint:disable variable_name
 public func .~ <A, B> (lens: WritableKeyPath<A, B>, b: B) -> (A) -> A {
-    
+
     return { a in
         var copy = a
         copy[keyPath:lens] = b
         return copy
     }
-    
+
 }

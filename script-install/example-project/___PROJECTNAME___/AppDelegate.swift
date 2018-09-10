@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Chesterfield
-//
-//  Created by Håkon Bogen on 22/06/2018,25.
-//  Copyright © 2018 Beining & Bogen. All rights reserved.
-//
-
 import UIKit
 import CoreData
 import ___PROJECTNAME___Framework
@@ -16,9 +8,9 @@ import ___PROJECTNAME___Api
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        
+
         return true
     }
 

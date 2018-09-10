@@ -2,11 +2,22 @@
 
 #User input
 
-EXAMPLEPROJECT=example-project
-PROJECTPATH=$HOME/Documents
-PROJECTNAME=Grr
-PROJECTDIR=$PROJECTPATH/$PROJECTNAME
+read -p "Project name: " PROJECTNAME
+read -e -p "Project path: " PROJECTPATH
+#read -e -p "Author: " author
 
+EXAMPLEPROJECT=example-project
+PROJECTDIR=$PROJECTPATH$PROJECTNAME
+
+#some prompt before we begin
+read -p "Install $PROJECTNAME in $PROJECTDIR ? " yesorno
+
+if [ $yesorno != "y" ] && [ $yesorno != "yes" ] ;
+then
+  echo "Install cancelled."
+else
+
+echo "Copying xcode template to $PROJECTDIR"
 
 #Copy procedure
 mkdir $PROJECTDIR
@@ -52,5 +63,21 @@ cp -r $EXAMPLEPROJECT/___PROJECTNAME___.xcworkspace $PROJECTDIR/$PROJECTNAME'.xc
 #POD
 cp $EXAMPLEPROJECT/Podfile $PROJECTDIR/Podfile
 
-#Replace ___X___ in file content
+#Replace ___PROJECTNAME___ in file content
 find $PROJECTDIR -type f \( -name \*.swift -o -name \*.h -o -name \Podfile -o -name \*.xcworkspacedata -o -name \*.xcscheme -o -name \*.pbxproj \) -print0 | xargs -0 sed -i '' 's/___PROJECTNAME___/'$PROJECTNAME'/g'
+
+#Replace ___FULLUSERNAME___ in file content
+
+#Replace ___DATE___ in file content
+
+#Pod install
+cd "$PROJECTDIR"
+pod install
+
+#Build targets
+
+#Open workspace
+echo "Install complete, opening workspace file."
+open $PROJECTDIR'/'$PROJECTNAME'.xcworkspace'
+
+fi
