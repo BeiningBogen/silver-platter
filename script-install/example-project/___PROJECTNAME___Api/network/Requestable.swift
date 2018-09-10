@@ -1,75 +1,67 @@
-//
-//  Requestable.swift
-//  CFApi
-//
-//  Created by Håkon Bogen on 29/06/2018,26.
-//  Copyright © 2018 Beining & Bogen. All rights reserved.
-//
-
 import Foundation
 import ReactiveCocoa
 import ReactiveSwift
 import Result
 
 public enum HTTPMethod: String {
-    
+
     case get = "GET"
     case post = "POST"
     case put = "PUT"
     case patch = "PATCH"
     case delete = "DELETE"
-    
+
 }
 public struct BasicHTTPAuth {
-    
+
     public let username: String
     public let password: String
-    
+
     public init(username: String, password: String) {
-        
+
         self.username = username
         self.password = password
-        
+
     }
-    
+
     public var authorizationHeader: [String: String] {
-        
+
         let credentialData = "\(username):\(password)".data(using: String.Encoding.utf8)!
         let base64Credentials = credentialData.base64EncodedString(options: Data.Base64EncodingOptions.lineLength76Characters)
         let header = ["Authorization": "Basic \(base64Credentials)"]
-        
+
         return header
-        
+
     }
-    
+
 }
 
 public protocol ServerConfigType {
-    
+
     var baseURL: URL { get }
     var basicHTTPAuth: BasicHTTPAuth? { get }
-    
+
 }
 
 public struct ServerConfig: ServerConfigType {
-    
+
     public private(set) var basicHTTPAuth: BasicHTTPAuth?
     public let baseURL: URL
 
     public init(baseURL: URL,basicHTTPAuth: BasicHTTPAuth?) {
-        
+
         self.baseURL = baseURL
         self.basicHTTPAuth = basicHTTPAuth
         //        self.clientId = String.random(length: 13)
-        
+
     }
-    
+
     public static let local : ServerConfig = ServerConfig.init(baseURL: URL(string: "http://localhost:8080")!, basicHTTPAuth: nil)
-    
+
 //    https://raw.githubusercontent.com/BeiningBogen/chesterfield-backend-react/master/chesterfield-backend-react/test.raw
-    
+
     //https://chesterfield-cleanserver.herokuapp.com/themes/Jakt&V%C3%A5pen
-    
+
     public static let staging : ServerConfig = ServerConfig.init(baseURL: URL(string: "https://chesterfield-cleanserver.herokuapp.com/")!, basicHTTPAuth: nil)
 
 }
@@ -84,11 +76,11 @@ extension Never: Encodable {
 }
 
 public enum RequestableParameterEncoding {
-    
+
     case query
     case json
     case custom(contentType: String, transform: (Data) throws -> Data?)
-    
+
     var contentType: String {
         switch self {
         case .query:
@@ -102,7 +94,7 @@ public enum RequestableParameterEncoding {
 }
 
 public enum RequestableError: Error, CustomDebugStringConvertible {
-    
+
     case invalidUrl(components: URLComponents)
     case encoding(error: EncodingError)
     case decoding(error: DecodingError, data: Data)
@@ -110,7 +102,7 @@ public enum RequestableError: Error, CustomDebugStringConvertible {
     case underlying(error: Error)
     case logicError(description: String)
     case shopError(error: Error)
-    
+
     public var debugDescription: String {
         switch self {
         case .invalidUrl(components: let components):
@@ -132,8 +124,8 @@ public enum RequestableError: Error, CustomDebugStringConvertible {
         case .shopError(error: let error):
             return String(describing: error)
             /*
-             
-             
+
+
              switch error.code {
              case .unknown: print("Unknown error. Please contact support")
              case .clientInvalid: print("Not allowed to make the payment")
@@ -145,13 +137,13 @@ public enum RequestableError: Error, CustomDebugStringConvertible {
              case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
              case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
              }
-             
-             
-             
-             
-             
-             
-             
+
+
+
+
+
+
+
              */
         }
     }
@@ -161,7 +153,7 @@ public protocol Requestable {
     associatedtype Parameter: Encodable
     associatedtype Path: PathComponentsProvider
     associatedtype Response
-    
+
     static var method: HTTPMethod { get }
     static var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy { get }
     static var dataEncodingStrategy: JSONEncoder.DataEncodingStrategy { get }
@@ -172,34 +164,34 @@ public protocol Requestable {
 }
 
 extension Requestable {
-    
+
     public static var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy {
         return .deferredToDate
     }
-    
+
     public static var dataEncodingStrategy: JSONEncoder.DataEncodingStrategy {
         return .deferredToData
     }
-    
+
     public static var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy {
         return .deferredToDate
     }
-    
+
     public static var dataDecodingStrategy: JSONDecoder.DataDecodingStrategy {
         return .deferredToData
     }
-    
+
     public static var parameterEncoding: RequestableParameterEncoding {
         return .json
     }
-    
+
     public static var mainHeaders: [String: String] {
         return [
             "Accept": RequestableParameterEncoding.json.contentType,
             "Content-Type": parameterEncoding.contentType
         ]
     }
-    
+
     public static var sessionConfig: URLSessionConfiguration {
         let config = URLSessionConfiguration.default
         config.timeoutIntervalForResource = 30
@@ -209,15 +201,15 @@ extension Requestable {
 }
 
 extension Requestable {
-    
+
     internal static func requestData(serverConfig: ServerConfigType, path: Path, parameters: Parameter?, sessionConfig: URLSessionConfiguration? = nil) -> SignalProducer<Data, RequestableError> {
-        
+
         return SignalProducer<Data, RequestableError> { observer, lifetime in
-            
+
             let auth: [String: String]? = serverConfig.basicHTTPAuth?.authorizationHeader
-            
+
             var urlComponents = URLComponents(string: serverConfig.baseURL.absoluteString)!
-                
+
 
             do {
                 if let baseUrl = urlComponents.url {
@@ -225,15 +217,15 @@ extension Requestable {
                     encoder.dataEncodingStrategy = dataEncodingStrategy
                     encoder.dateEncodingStrategy = dateEncodingStrategy
                     if let query = path.pathComponents.query {
-                        
+
                         let decoded = try JSONSerialization.jsonObject(with: encoder.encode(query), options: [])
-                        
+
                         guard let dictionary = decoded as? [String: Any] else {
                             throw EncodingError.invalidValue(decoded, .init(codingPath: [], debugDescription: "Expected to decode Dictionary<String, _> but found a Dictionary<_, _> instead"))
                         }
                         urlComponents.queryItems = dictionary.map { URLQueryItem(name: $0, value: String(describing: $1)) }
                     }
-                    
+
                     let url = path.pathComponents.path.reduce(baseUrl, { $0.appendingPathComponent($1) })
                     var request = URLRequest(url: url)
                     request.httpMethod = method.rawValue
@@ -278,11 +270,11 @@ extension Requestable {
     static func headerTransform(_ header: [AnyHashable: Any]?, indent: Int) -> String {
         return (header ?? [:]).map { "\(Array(repeating: "    ", count: indent).joined())\($0): \($1)" }.joined(separator: "\n")
     }
-    
+
     static func dataTransform(_ data: Data?) -> String {
         return data.flatMap { String(data: $0, encoding: .utf8) } ?? "null"
     }
-    
+
     static func debugYAML(request: URLRequest?) -> String? {
         guard let request = request,
             let method = request.httpMethod,
@@ -297,7 +289,7 @@ extension Requestable {
         Body: \(dataTransform(request.httpBody))
         """
     }
-    
+
     static func debugCURL(request: URLRequest?) -> String {
         guard let request = request,
             let httpMethod = request.httpMethod,
@@ -320,7 +312,7 @@ extension Requestable {
         return ((["curl", method] + headers + bodyComponents + [url.absoluteString]) as [String])
             .joined(separator: " ")
     }
-    
+
     static func debugYAML(response: URLResponse?, data: Data?) -> String? {
         guard let response = response as? HTTPURLResponse else { return nil }
         return """
@@ -331,7 +323,7 @@ extension Requestable {
         Body: \(dataTransform(data))
         """
     }
-    
+
     static func debugYAML(responseError error: RequestableError?) -> String? {
         guard let error = error else { return nil }
         return """
@@ -339,7 +331,7 @@ extension Requestable {
         Error: \(error.debugDescription)
         """
     }
-    
+
     static func debugPrintYAML(request: URLRequest?, response: URLResponse?, received: Data?, error: RequestableError? = nil) {
         let responseYaml = debugYAML(responseError: error) ?? debugYAML(response: response, data: received)
         let yaml = [debugYAML(request: request), responseYaml]
@@ -380,7 +372,7 @@ extension Requestable where Response == Data {
 }
 
 extension Requestable where Response == Data, Parameter == Never {
-    
+
     public static func request(serverConfig: ServerConfigType, path: Path, sessionConfig: URLSessionConfiguration? = nil) -> SignalProducer<Response, RequestableError> {
         return requestData(serverConfig: serverConfig, path: path, parameters: nil, sessionConfig: sessionConfig)
     }
@@ -395,17 +387,16 @@ extension Requestable where Response: Decodable {
 
 
 extension Requestable where Response: Decodable, Parameter == Never {
-    
+
     public static func request(service: ServiceType, path: Path, sessionConfig: URLSessionConfiguration? = nil) -> SignalProducer<Response, RequestableError> {
-        
+
         return requestData(serverConfig: service.serverConfig, path: path, parameters: nil, sessionConfig: sessionConfig)
             .attemptMap(decode(data:))
     }
-    
+
     public static func request(serverConfig: ServerConfigType, path: Path, sessionConfig: URLSessionConfiguration? = nil) -> SignalProducer<Response, RequestableError> {
-        
+
         return requestData(serverConfig: serverConfig, path: path, parameters: nil, sessionConfig: sessionConfig)
             .attemptMap(decode(data:))
     }
 }
-

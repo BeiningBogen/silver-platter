@@ -1,11 +1,3 @@
-//
-//  ___FILENAME___
-//  ___PROJECTNAME___
-//
-//  Created by ___FULLUSERNAME___ on ___DATE___.
-//  ___COPYRIGHT___
-//
-
 import ReactiveCocoa
 import ReactiveSwift
 import Result
@@ -39,7 +31,7 @@ public class ExampleViewModel: ExampleViewModelType, ExampleViewModelInputs, Exa
     public func configure(text: String) {
         configureWithTextProperty.value = text
     }
-    
+
     let closeTappedProperty = MutableProperty(())
     public func closeTapped() {
         closeTappedProperty.value = ()
