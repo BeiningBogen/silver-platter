@@ -24,9 +24,9 @@ public class ExampleTableViewModel: ExampleTableViewModelType, ExampleTableViewM
         viewDidLoadProperty.value = ()
     }
     
-    let configureWithTextProperty = MutableProperty<String?>(nil)
-    public func configure(text: String) {
-        configureWithTextProperty.value = text
+    let configureWithTextProperty = MutableProperty<[String]?>(nil)
+    public func configure(texts: [String]) {
+        configureWithTextProperty.value = texts
     }
     
     public var inputs: ExampleTableViewModelInputs { return self }
