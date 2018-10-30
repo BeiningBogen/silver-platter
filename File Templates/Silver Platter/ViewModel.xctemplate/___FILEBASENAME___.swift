@@ -14,19 +14,16 @@ protocol ___VARIABLE_productName___Inputs {
 
 }
 
-protocol  ___VARIABLE_productName___Outputs {
+protocol ___VARIABLE_productName___Outputs {
 
 }
 
 protocol ___VARIABLE_productName___Type {
-
     var inputs: ___VARIABLE_productName___Inputs { get }
     var outputs: ___VARIABLE_productName___Outputs { get }
-
 }
 
 class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName___Type, ___VARIABLE_productName___Inputs, ___VARIABLE_productName___Outputs {
-
     init() {
 
     }

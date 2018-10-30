@@ -19,11 +19,18 @@
 		0A5C92972112FEEF00F7C7B0 /* TestObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B51572112F94E009C0EAA /* TestObserver.swift */; };
 		0A774B2820FE2F3A00B83EFE /* OperatorOverload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A774B2720FE2F3A00B83EFE /* OperatorOverload.swift */; };
 		F11FF8A4213981B200344836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EBB1820DCE97D00B7D41D /* AppDelegate.swift */; };
+		F14DADB92179F9C100F9DD85 /* ExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DADB32179F57700F9DD85 /* ExampleTableViewController.swift */; };
+		F14DADBA2179F9C600F9DD85 /* ExampleTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DADB42179F57700F9DD85 /* ExampleTableViewDataSource.swift */; };
+		F14DADBB2179F9C900F9DD85 /* ExampleTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DADB52179F57700F9DD85 /* ExampleTableViewModel.swift */; };
+		F14DADBD2179FD3400F9DD85 /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DADBC2179FD3400F9DD85 /* ExampleCell.swift */; };
 		F166CDEC21429D70002D1D60 /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DAC3FD21429AA100801657 /* ExampleViewModel.swift */; };
 		F166CDED21429D78002D1D60 /* ExampleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DAC3FC21429AA100801657 /* ExampleViewModelTests.swift */; };
 		F176396621243DD400EDFC91 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A550C7720F62B2700F69F67 /* Service.swift */; };
 		F17F5C6D2134333A0082A36F /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A550C7C20F62B2700F69F67 /* MockService.swift */; };
 		F1DAC40321429AC300801657 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DAC3FB21429AA100801657 /* ExampleViewController.swift */; };
+		F1E97EDF217BBFC400BF2ECA /* ExampleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E97EDE217BBFC400BF2ECA /* ExampleCellViewModel.swift */; };
+		F1E97EE1217BC68D00BF2ECA /* ValueCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E97EE0217BC68D00BF2ECA /* ValueCellDataSource.swift */; };
+		F1E97EE3217BC72300BF2ECA /* ValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E97EE2217BC72300BF2ECA /* ValueCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +89,10 @@
 		0A6F45F520F9EFC60062D5BE /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		0A6F45F720F9F0420062D5BE /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		0A774B2720FE2F3A00B83EFE /* OperatorOverload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorOverload.swift; sourceTree = "<group>"; };
+		F14DADB32179F57700F9DD85 /* ExampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTableViewController.swift; sourceTree = "<group>"; };
+		F14DADB42179F57700F9DD85 /* ExampleTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTableViewDataSource.swift; sourceTree = "<group>"; };
+		F14DADB52179F57700F9DD85 /* ExampleTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTableViewModel.swift; sourceTree = "<group>"; };
+		F14DADBC2179FD3400F9DD85 /* ExampleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
 		F176F623214268290094BB29 /* ___PROJECTNAME___.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "___PROJECTNAME___.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F176F624214268290094BB29 /* ___PROJECTNAME___Api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "___PROJECTNAME___Api.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F176F625214268290094BB29 /* ___PROJECTNAME___Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "___PROJECTNAME___Framework.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +101,9 @@
 		F1DAC3FC21429AA100801657 /* ExampleViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModelTests.swift; sourceTree = "<group>"; };
 		F1DAC3FD21429AA100801657 /* ExampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
 		F1DAC3FE21429AA100801657 /* ExampleViewController.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ExampleViewController.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F1E97EDE217BBFC400BF2ECA /* ExampleCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCellViewModel.swift; sourceTree = "<group>"; };
+		F1E97EE0217BC68D00BF2ECA /* ValueCellDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueCellDataSource.swift; sourceTree = "<group>"; };
+		F1E97EE2217BC72300BF2ECA /* ValueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +226,13 @@
 		F1DAC40221429AA700801657 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				F1E97EE2217BC72300BF2ECA /* ValueCell.swift */,
+				F1E97EE0217BC68D00BF2ECA /* ValueCellDataSource.swift */,
+				F1E97EDE217BBFC400BF2ECA /* ExampleCellViewModel.swift */,
+				F14DADBC2179FD3400F9DD85 /* ExampleCell.swift */,
+				F14DADB32179F57700F9DD85 /* ExampleTableViewController.swift */,
+				F14DADB42179F57700F9DD85 /* ExampleTableViewDataSource.swift */,
+				F14DADB52179F57700F9DD85 /* ExampleTableViewModel.swift */,
 				F1DAC3FB21429AA100801657 /* ExampleViewController.swift */,
 				F1DAC3FD21429AA100801657 /* ExampleViewModel.swift */,
 				F1DAC3FC21429AA100801657 /* ExampleViewModelTests.swift */,
@@ -549,11 +570,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E97EE1217BC68D00BF2ECA /* ValueCellDataSource.swift in Sources */,
+				F14DADB92179F9C100F9DD85 /* ExampleTableViewController.swift in Sources */,
 				F166CDEC21429D70002D1D60 /* ExampleViewModel.swift in Sources */,
+				F14DADBA2179F9C600F9DD85 /* ExampleTableViewDataSource.swift in Sources */,
+				F14DADBD2179FD3400F9DD85 /* ExampleCell.swift in Sources */,
 				0A774B2820FE2F3A00B83EFE /* OperatorOverload.swift in Sources */,
 				F1DAC40321429AC300801657 /* ExampleViewController.swift in Sources */,
+				F1E97EE3217BC72300BF2ECA /* ValueCell.swift in Sources */,
 				0A58AF7520FCE5080076F604 /* Environment.swift in Sources */,
+				F14DADBB2179F9C900F9DD85 /* ExampleTableViewModel.swift in Sources */,
 				0A58AF7420FCE5080076F604 /* AppEnvironment.swift in Sources */,
+				F1E97EDF217BBFC400BF2ECA /* ExampleCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
