@@ -6,20 +6,20 @@ import Result
 @testable import ___PROJECTNAME___Framework
 @testable import ___PROJECTNAME___Api
 
-class ExampleViewModelTests: XCTestCase {
+class ExampleCell2ViewModelTests: XCTestCase {
     
-    let exampleViewModel = ExampleViewModel()
+    let exampleCell2ViewModel = ExampleCell2ViewModel()
     let title = TestObserver<String, NoError>()
     
     override func setUp() {
         super.setUp()
-        exampleViewModel.outputs.title.observe(title.observer)
+        exampleCell2ViewModel.outputs.title.observe(title.observer)
     }
     
     override func tearDown() {}
     
     func testTitle() {
-        exampleViewModel.configure(text: "Example")
+        exampleCell2ViewModel.inputs.configureWith(example: "Example")
         title.assertLastValue("Example")
         XCTAssertEqual(title.values.count, 1)
     }

@@ -29,6 +29,9 @@
 		F17F5C6D2134333A0082A36F /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A550C7C20F62B2700F69F67 /* MockService.swift */; };
 		F1ABCB2F2188B55700D0BD9B /* ValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E97EE2217BC72300BF2ECA /* ValueCell.swift */; };
 		F1ABCB302188B56100D0BD9B /* ValueCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E97EE0217BC68D00BF2ECA /* ValueCellDataSource.swift */; };
+		F1C74B4D2189FF9B00B01FE0 /* ExampleTableViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C74B4C2189FF9B00B01FE0 /* ExampleTableViewModelTests.swift */; };
+		F1C74B4F218A004100B01FE0 /* ExampleCell2ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C74B4E218A004100B01FE0 /* ExampleCell2ViewModelTests.swift */; };
+		F1C74B51218A004C00B01FE0 /* ExampleCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C74B50218A004C00B01FE0 /* ExampleCellViewModelTests.swift */; };
 		F1DAC40321429AC300801657 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DAC3FB21429AA100801657 /* ExampleViewController.swift */; };
 		F1E97EDF217BBFC400BF2ECA /* ExampleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E97EDE217BBFC400BF2ECA /* ExampleCellViewModel.swift */; };
 		F1F25BFC2189B642009F1AB0 /* ExampleCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F25BFB2189B642009F1AB0 /* ExampleCell2.swift */; };
@@ -101,6 +104,9 @@
 		F176F624214268290094BB29 /* ___PROJECTNAME___Api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "___PROJECTNAME___Api.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F176F625214268290094BB29 /* ___PROJECTNAME___Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "___PROJECTNAME___Framework.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F176F626214268290094BB29 /* ___PROJECTNAME___Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "___PROJECTNAME___Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1C74B4C2189FF9B00B01FE0 /* ExampleTableViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTableViewModelTests.swift; sourceTree = "<group>"; };
+		F1C74B4E218A004100B01FE0 /* ExampleCell2ViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCell2ViewModelTests.swift; sourceTree = "<group>"; };
+		F1C74B50218A004C00B01FE0 /* ExampleCellViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCellViewModelTests.swift; sourceTree = "<group>"; };
 		F1DAC3FB21429AA100801657 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		F1DAC3FC21429AA100801657 /* ExampleViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModelTests.swift; sourceTree = "<group>"; };
 		F1DAC3FD21429AA100801657 /* ExampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
@@ -258,6 +264,7 @@
 				F14DADB32179F57700F9DD85 /* ExampleTableViewController.swift */,
 				F14DADB42179F57700F9DD85 /* ExampleTableViewDataSource.swift */,
 				F14DADB52179F57700F9DD85 /* ExampleTableViewModel.swift */,
+				F1C74B4C2189FF9B00B01FE0 /* ExampleTableViewModelTests.swift */,
 			);
 			path = tableView;
 			sourceTree = "<group>";
@@ -265,6 +272,8 @@
 		F1F25BFA2189B5FA009F1AB0 /* cell */ = {
 			isa = PBXGroup;
 			children = (
+				F1C74B50218A004C00B01FE0 /* ExampleCellViewModelTests.swift */,
+				F1C74B4E218A004100B01FE0 /* ExampleCell2ViewModelTests.swift */,
 				F1F25BFD2189B68C009F1AB0 /* ExampleCell2ViewModel.swift */,
 				F1F25BFB2189B642009F1AB0 /* ExampleCell2.swift */,
 				F14DADBC2179FD3400F9DD85 /* ExampleCell.swift */,
@@ -633,8 +642,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C74B51218A004C00B01FE0 /* ExampleCellViewModelTests.swift in Sources */,
+				F1C74B4F218A004100B01FE0 /* ExampleCell2ViewModelTests.swift in Sources */,
 				0A5C92972112FEEF00F7C7B0 /* TestObserver.swift in Sources */,
 				F166CDED21429D78002D1D60 /* ExampleViewModelTests.swift in Sources */,
+				F1C74B4D2189FF9B00B01FE0 /* ExampleTableViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
