@@ -28,6 +28,7 @@ cp -r $EXAMPLEPROJECT/___PROJECTNAME___ $PROJECTDIR/$PROJECTNAME
 #Api target
 mkdir $PROJECTDIR/$PROJECTNAME'Api'
 cp -r $EXAMPLEPROJECT/___PROJECTNAME___Api/network $PROJECTDIR/$PROJECTNAME'Api'/network
+cp -r $EXAMPLEPROJECT/___PROJECTNAME___Api/valueCell $PROJECTDIR/$PROJECTNAME'Api'/valueCell
 cp $EXAMPLEPROJECT/___PROJECTNAME___Api/___PROJECTNAME___Api.h $PROJECTDIR/$PROJECTNAME'Api'/$PROJECTNAME'Api'.h
 cp $EXAMPLEPROJECT/___PROJECTNAME___Api/Info.plist $PROJECTDIR/$PROJECTNAME'Api'/Info.plist
 
@@ -70,11 +71,17 @@ find $PROJECTDIR -type f \( -name \*.swift -o -name \*.h -o -name \Podfile -o -n
 
 #Replace ___DATE___ in file content
 
+#Clean project
+xcodebuild clean
+
 #Pod install
 cd "$PROJECTDIR"
 pod install
 
 #Build targets
+xcodebuild -target $PROJECTNAME'Api'
+xcodebuild -target $PROJECTNAME'Framework'
+xcodebuild -target $PROJECTNAME
 
 #Open workspace
 echo "Install complete, opening workspace file."

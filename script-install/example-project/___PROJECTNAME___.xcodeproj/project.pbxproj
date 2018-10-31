@@ -31,6 +31,10 @@
 		F1ABCB302188B56100D0BD9B /* ValueCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E97EE0217BC68D00BF2ECA /* ValueCellDataSource.swift */; };
 		F1DAC40321429AC300801657 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DAC3FB21429AA100801657 /* ExampleViewController.swift */; };
 		F1E97EDF217BBFC400BF2ECA /* ExampleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E97EDE217BBFC400BF2ECA /* ExampleCellViewModel.swift */; };
+		F1F25BFC2189B642009F1AB0 /* ExampleCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F25BFB2189B642009F1AB0 /* ExampleCell2.swift */; };
+		F1F25BFE2189B68C009F1AB0 /* ExampleCell2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F25BFD2189B68C009F1AB0 /* ExampleCell2ViewModel.swift */; };
+		F1F25BFF2189BA9A009F1AB0 /* ValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E97EE2217BC72300BF2ECA /* ValueCell.swift */; };
+		F1F25C002189BA9D009F1AB0 /* ValueCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E97EE0217BC68D00BF2ECA /* ValueCellDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +108,8 @@
 		F1E97EDE217BBFC400BF2ECA /* ExampleCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCellViewModel.swift; sourceTree = "<group>"; };
 		F1E97EE0217BC68D00BF2ECA /* ValueCellDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueCellDataSource.swift; sourceTree = "<group>"; };
 		F1E97EE2217BC72300BF2ECA /* ValueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueCell.swift; sourceTree = "<group>"; };
+		F1F25BFB2189B642009F1AB0 /* ExampleCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCell2.swift; sourceTree = "<group>"; };
+		F1F25BFD2189B68C009F1AB0 /* ExampleCell2ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCell2ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,17 +242,35 @@
 		F1DAC40221429AA700801657 /* example */ = {
 			isa = PBXGroup;
 			children = (
-				F1E97EDE217BBFC400BF2ECA /* ExampleCellViewModel.swift */,
-				F14DADBC2179FD3400F9DD85 /* ExampleCell.swift */,
-				F14DADB32179F57700F9DD85 /* ExampleTableViewController.swift */,
-				F14DADB42179F57700F9DD85 /* ExampleTableViewDataSource.swift */,
-				F14DADB52179F57700F9DD85 /* ExampleTableViewModel.swift */,
+				F1F25BF92189B5C8009F1AB0 /* tableView */,
 				F1DAC3FB21429AA100801657 /* ExampleViewController.swift */,
 				F1DAC3FD21429AA100801657 /* ExampleViewModel.swift */,
 				F1DAC3FC21429AA100801657 /* ExampleViewModelTests.swift */,
 				F1DAC3FE21429AA100801657 /* ExampleViewController.playground */,
 			);
 			path = example;
+			sourceTree = "<group>";
+		};
+		F1F25BF92189B5C8009F1AB0 /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				F1F25BFA2189B5FA009F1AB0 /* cell */,
+				F14DADB32179F57700F9DD85 /* ExampleTableViewController.swift */,
+				F14DADB42179F57700F9DD85 /* ExampleTableViewDataSource.swift */,
+				F14DADB52179F57700F9DD85 /* ExampleTableViewModel.swift */,
+			);
+			path = tableView;
+			sourceTree = "<group>";
+		};
+		F1F25BFA2189B5FA009F1AB0 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				F1F25BFD2189B68C009F1AB0 /* ExampleCell2ViewModel.swift */,
+				F1F25BFB2189B642009F1AB0 /* ExampleCell2.swift */,
+				F14DADBC2179FD3400F9DD85 /* ExampleCell.swift */,
+				F1E97EDE217BBFC400BF2ECA /* ExampleCellViewModel.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -580,6 +604,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F25C002189BA9D009F1AB0 /* ValueCellDataSource.swift in Sources */,
 				F14DADB92179F9C100F9DD85 /* ExampleTableViewController.swift in Sources */,
 				F166CDEC21429D70002D1D60 /* ExampleViewModel.swift in Sources */,
 				F14DADBA2179F9C600F9DD85 /* ExampleTableViewDataSource.swift in Sources */,
@@ -587,8 +612,11 @@
 				0A774B2820FE2F3A00B83EFE /* OperatorOverload.swift in Sources */,
 				F1DAC40321429AC300801657 /* ExampleViewController.swift in Sources */,
 				0A58AF7520FCE5080076F604 /* Environment.swift in Sources */,
+				F1F25BFF2189BA9A009F1AB0 /* ValueCell.swift in Sources */,
 				F14DADBB2179F9C900F9DD85 /* ExampleTableViewModel.swift in Sources */,
+				F1F25BFE2189B68C009F1AB0 /* ExampleCell2ViewModel.swift in Sources */,
 				0A58AF7420FCE5080076F604 /* AppEnvironment.swift in Sources */,
+				F1F25BFC2189B642009F1AB0 /* ExampleCell2.swift in Sources */,
 				F1E97EDF217BBFC400BF2ECA /* ExampleCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

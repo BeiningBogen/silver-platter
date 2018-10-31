@@ -7,10 +7,10 @@ import Cartography
 
 final class ExampleTableViewController: UIViewController {
     var tableView:UITableView!
-
+    
     let viewModel = ExampleTableViewModel()
     let dataSource = ExampleTableViewDataSource()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -18,21 +18,21 @@ final class ExampleTableViewController: UIViewController {
         bindStyles()
         bindViewModel()
         viewModel.inputs.viewDidLoad()
-        viewModel.inputs.configure(texts: ["Example1", "Example2", "Example3"])
+        
+        viewModel.configure(texts: ["Example1", "Example2", "Example3"])
     }
-
+    
     func setupViews() {
         tableView = UITableView.init(frame: .zero)
         view.addSubview(tableView)
-
+        
         tableView.register(ExampleCell.self, forCellReuseIdentifier: ExampleCell.defaultReusableId)
-
+        tableView.register(ExampleCell2.self, forCellReuseIdentifier: ExampleCell2.defaultReusableId)
+        
         tableView.delegate = self
         tableView.dataSource = dataSource
-
-        //register tableviewcell
     }
-
+    
     func setupConstraints() {
         constrain(view, tableView) { viewProxy, tableViewProxy in
             tableViewProxy.top == viewProxy.top
@@ -41,16 +41,22 @@ final class ExampleTableViewController: UIViewController {
             tableViewProxy.bottom == viewProxy.bottom
         }
     }
-
+    
     func bindStyles() {
         tableView.backgroundColor = .white
     }
-
+    
     func bindViewModel() {
-        viewModel.outputs
+        viewModel.outputs.cells.observeValues{ [weak self] cells in
+            self?.dataSource.loadData(examples: cells)
+            self?.dataSource.loadData(examples2: cells)
+            self?.tableView.reloadData()
+        }
     }
 }
 
 extension ExampleTableViewController : UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
 }

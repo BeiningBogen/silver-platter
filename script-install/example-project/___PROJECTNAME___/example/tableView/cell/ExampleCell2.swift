@@ -4,15 +4,15 @@ import ReactiveCocoa
 import ReactiveSwift
 import Cartography
 
-class ExampleCell: UITableViewCell, ValueCell {
-    
-    static var defaultReusableId: String = String.init(describing: ExampleCell.self)
-    typealias Value = ReactiveSwift.Property<String>
-    
+class ExampleCell2: UITableViewCell, ValueCell {
+
+    static var defaultReusableId: String = String.init(describing: ExampleCell2.self)
+    typealias Value = String
+
     var titleLabel: UILabel!
-    
-    let viewModel = ExampleCellViewModel()
-    
+
+    let viewModel = ExampleCell2ViewModel()
+
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: ExampleCell.defaultReusableId)
         setupViews()
@@ -20,20 +20,20 @@ class ExampleCell: UITableViewCell, ValueCell {
         bindStyles()
         bindViewModel()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func configureWith(value: ReactiveSwift.Property<String>) {
+
+    func configureWith(value: String) {
         viewModel.configureWith(example: value)
     }
-    
+
     func setupViews() {
         titleLabel = UILabel.init(frame: .zero)
         addSubview(titleLabel)
     }
-    
+
     func setupConstraints() {
         constrain(self, titleLabel) { cellProxy, titleLabelProxy in
             titleLabelProxy.top == cellProxy.top
@@ -42,11 +42,12 @@ class ExampleCell: UITableViewCell, ValueCell {
             titleLabelProxy.bottom == cellProxy.bottom
         }
     }
-    
+
     func bindStyles() {
         titleLabel.textAlignment = .center
+        backgroundColor = .blue
     }
-    
+
     func bindViewModel() {
         viewModel.outputs.title.observeValues{ [weak self] title in
             self?.titleLabel.text = title

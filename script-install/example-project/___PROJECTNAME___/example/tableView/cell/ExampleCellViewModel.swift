@@ -3,7 +3,7 @@ import ReactiveSwift
 import Result
 
 public protocol ExampleCellViewModelInputs {
-    func configureWith(example: Property<String>)
+    func configureWith(example: String)
 }
 
 public protocol ExampleCellViewModelOutputs {
@@ -22,8 +22,8 @@ class ExampleCellViewModel: ExampleCellViewModelType, ExampleCellViewModelInputs
     }
     
     private let configureWithProperty = MutableProperty<String?>(nil)
-    func configureWith(example: Property<String>) {
-        configureWithProperty.value = example.value
+    func configureWith(example: String) {
+        configureWithProperty.value = example
     }
     
     public let title: Signal<String, NoError>
@@ -31,4 +31,3 @@ class ExampleCellViewModel: ExampleCellViewModelType, ExampleCellViewModelInputs
     var inputs: ExampleCellViewModelInputs { return self }
     var outputs: ExampleCellViewModelOutputs { return self }
 }
-
