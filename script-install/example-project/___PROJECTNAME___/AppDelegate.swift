@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.backgroundColor = .white
         
-        splitViewController.viewControllers = [rootNavigationController, exampleNavigationController]
+        splitViewController.viewControllers = [rootNavigationController, exampleNavigationController /*Exchange this for your own viewcontroller*/]
         window?.rootViewController = splitViewController
         window?.makeKeyAndVisible()
 
