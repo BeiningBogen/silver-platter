@@ -34,6 +34,22 @@
 			<key>Type</key>
 			<string>text</string>
 		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Name of the ViewModel to use use in this template.</string>
+			<key>Suffixes</key>
+			<string>ViewController</string>
+			<key>Identifier</key>
+			<string>viewModel</string>
+			<key>Name</key>
+			<string>ViewModel:</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
 	</array>
 </dict>
 </plist>
