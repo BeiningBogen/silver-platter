@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DefaultCompletionName</key>
+	<string>TableView</string>
+	<key>Description</key>
+	<string>This generates a new tableview using the Kickstarter architecture. This tableView consists of one tableViewController, one dataSource, and one tableViewCell.</string>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Description</key>
+			<string>Table View</string>
+			<key>Identifier</key>
+			<string>tableViewName</string>
+			<key>Name</key>
+			<string>Table View Name:</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_tableViewName:identifier___</string>
+			<key>Identifier</key>
+			<string>tableViewIdentifier</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_tableViewIdentifier___TableViewController</string>
+			<key>Description</key>
+			<string>The table view controller name</string>
+			<key>Identifier</key>
+			<string>tableViewControllerName</string>
+			<key>Name</key>
+			<string>Table View Controller Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_tableViewIdentifier___DataSource</string>
+			<key>Description</key>
+			<string>The data source name</string>
+			<key>Identifier</key>
+			<string>dataSourceName</string>
+			<key>Name</key>
+			<string>Data Source Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_tableViewIdentifier___ViewModelTests</string>
+			<key>Description</key>
+			<string>The table view cell's name</string>
+			<key>Identifier</key>
+			<string>tableViewCellName</string>
+			<key>Name</key>
+			<string>Table View Cell Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Cell</string>
+			<key>Identifier</key>
+			<string>cellName</string>
+			<key>Name</key>
+			<string>Cell View Name:</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_cellName:identifier___</string>
+			<key>Identifier</key>
+			<string>cellIdentifier</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_cellIdentifier___ViewModel</string>
+			<key>Description</key>
+			<string>The view model name</string>
+			<key>Identifier</key>
+			<string>viewModelName</string>
+			<key>Name</key>
+			<string>View Model Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_cellIdentifier___Tests</string>
+			<key>Description</key>
+			<string>The test name</string>
+			<key>Identifier</key>
+			<string>cellViewModelTests</string>
+			<key>Name</key>
+			<string>Cell View Model Tests Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>String</string>
+			<key>Description</key>
+			<string>Cell Type</string>
+			<key>Identifier</key>
+			<string>cellType</string>
+			<key>Name</key>
+			<string>Cell Type (e.g. String or custom object):</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_cellType:identifier___</string>
+			<key>Identifier</key>
+			<string>cellTypeIdentifier</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+	</array>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+	<key>SortOrder</key>
+	<string>9</string>
+	<key>Summary</key>
+	<string>This generates a new scene using the kickstarter architecture.</string>
+</dict>
+</plist>

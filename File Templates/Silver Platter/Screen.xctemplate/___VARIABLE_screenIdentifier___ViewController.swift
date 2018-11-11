@@ -44,6 +44,8 @@ public class ___VARIABLE_screenIdentifier___ViewController : UIViewController {
     }
 
     func bindViewModel() {
-
+        viewModel.outputs.title.observeValues { [weak self] currentTitle in
+            self?.title = currentTitle
+        }
     }
 }
