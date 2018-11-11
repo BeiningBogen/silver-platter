@@ -32,7 +32,7 @@ final class ___VARIABLE_tableViewIdentifier___TableViewController: UIViewControl
         tableView = UITableView.init(frame: .zero)
         view.addSubview(tableView)
 
-        tableView.register(___VARIABLE_cellIdentifier___ValueCell.self, forCellReuseIdentifier: ___VARIABLE_cellIdentifier___ValueCell.defaultReusableId)
+        tableView.register(___VARIABLE_cellIdentifier___Cell.self, forCellReuseIdentifier: ___VARIABLE_cellIdentifier___Cell.defaultReusableId)
 
         tableView.delegate = self
         tableView.dataSource = dataSource

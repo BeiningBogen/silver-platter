@@ -11,7 +11,7 @@ import ReactiveCocoa
 import ReactiveSwift
 import Cartography
 
-class ___VARIABLE_cellIdentifier___ValueCell: UITableViewCell, ValueCell {
+class ___VARIABLE_cellIdentifier___Cell: UITableViewCell, ValueCell {
 
     static var defaultReusableId: String = String.init(describing: ___VARIABLE_cellIdentifier___ValueCell.self)
     typealias Value = ReactiveSwift.Property<Mood>
