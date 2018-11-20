@@ -12,14 +12,14 @@ import ReactiveSwift
 
 class ___FILEBASENAMEASIDENTIFIER___: XCTestCase {
 
-    let viewModel = ___VARIABLE_viewModel___()
+    let viewModel = //Fill in viewmodel here
 
     let test = TestObserver<String, NoError>()
 
     override func setUp() {
         super.setUp()
 
-        viewModel.outputs.test.observe(test.observer)
+        viewModel.outputs./*viewmodel output*/.observe(test.observer)
     }
 
     override func tearDown() {

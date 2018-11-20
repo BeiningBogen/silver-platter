@@ -20,7 +20,7 @@
 	<array>
 		<dict>
 			<key>Description</key>
-			<string>Name of the ViewController class (include ViewController in the name)</string>
+			<string>Name of the Test class (include ViewController in the name)</string>
 			<key>Suffixes</key>
 			<string>ViewController</string>
 			<key>Identifier</key>
@@ -33,102 +33,6 @@
 			<true/>
 			<key>Type</key>
 			<string>text</string>
-		</dict>
-		<dict>
-			<key>Description</key>
-			<string>Name of the ViewModel to use use in this template.</string>
-			<key>Suffixes</key>
-			<string>ViewController</string>
-			<key>Identifier</key>
-			<string>viewModel</string>
-			<key>Name</key>
-			<string>ViewModel:</string>
-			<key>NotPersisted</key>
-			<true/>
-			<key>Required</key>
-			<true/>
-			<key>Type</key>
-			<string>text</string>
-			<key>DefaultCompletionName</key>
-			<string>MyTableViewController</string>
-		</dict>
-		<dict>
-			<key>Description</key>
-			<string>The name of the scene to create</string>
-			<key>Identifier</key>
-			<string>sceneName</string>
-			<key>Name</key>
-			<string>New Scene Name:</string>
-			<key>NotPersisted</key>
-			<true/>
-			<key>Required</key>
-			<true/>
-			<key>Type</key>
-			<string>text</string>
-		</dict>
-		<dict>
-			<key>Default</key>
-			<string>___VARIABLE_sceneName:identifier___</string>
-			<key>Identifier</key>
-			<string>sceneIdentifier</string>
-			<key>Type</key>
-			<string>static</string>
-		</dict>
-		<dict>
-			<key>Default</key>
-			<string>___VARIABLE_sceneIdentifier___ViewController</string>
-			<key>Description</key>
-			<string>The view controller name</string>
-			<key>Identifier</key>
-			<string>viewControllerName</string>
-			<key>Name</key>
-			<string>View Controller Name:</string>
-			<key>Required</key>
-			<true/>
-			<key>Type</key>
-			<string>static</string>
-		</dict>
-		<dict>
-			<key>Default</key>
-			<string>___VARIABLE_sceneIdentifier___ViewModel</string>
-			<key>Description</key>
-			<string>The view model name</string>
-			<key>Identifier</key>
-			<string>viewModelName</string>
-			<key>Name</key>
-			<string>ViewModel Name:</string>
-			<key>Required</key>
-			<true/>
-			<key>Type</key>
-			<string>static</string>
-		</dict>
-		<dict>
-			<key>Default</key>
-			<string>___VARIABLE_sceneIdentifier___Coordinator</string>
-			<key>Description</key>
-			<string>The coordinator name</string>
-			<key>Identifier</key>
-			<string>coordinatorName</string>
-			<key>Name</key>
-			<string>Coordinator Name:</string>
-			<key>Required</key>
-			<true/>
-			<key>Type</key>
-			<string>static</string>
-		</dict>
-		<dict>
-			<key>Default</key>
-			<string>___VARIABLE_sceneIdentifier___Storyboard</string>
-			<key>Description</key>
-			<string>The storyboard name</string>
-			<key>Identifier</key>
-			<string>storyboardName</string>
-			<key>Name</key>
-			<string>Storyboard Name:</string>
-			<key>Required</key>
-			<true/>
-			<key>Type</key>
-			<string>static</string>
 		</dict>
 	</array>
 </dict>
