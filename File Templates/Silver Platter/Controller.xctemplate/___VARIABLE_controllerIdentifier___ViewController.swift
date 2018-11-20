@@ -9,9 +9,9 @@
 import UIKit
 import Cartography
 
-public class ___VARIABLE_screenIdentifier___ViewController : UIViewController {
+public class ___VARIABLE_controllerIdentifier___ViewController : UIViewController {
 
-    let viewModel = ___VARIABLE_screenIdentifier___ViewModel()
+    let viewModel = ___VARIABLE_controllerIdentifier___ViewModel()
 
     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)

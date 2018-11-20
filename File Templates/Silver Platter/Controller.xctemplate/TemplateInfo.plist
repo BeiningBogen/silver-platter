@@ -3,20 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>DefaultCompletionName</key>
-	<string>Screen</string>
+	<string>Controller</string>
 	<key>Description</key>
-	<string>This generates a new screen using the Kickstarter architecture. The screen consists of one viewcontroller, one viewmodel, and one viewmodeltest.</string>
+	<string>This generates a new controller using the Kickstarter architecture. The controller consists of one viewcontroller, one viewmodel, and one viewmodeltest.</string>
 	<key>Kind</key>
 	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
 	<key>Options</key>
 	<array>
 		<dict>
 			<key>Description</key>
-			<string>Screen name</string>
+			<string>Controller name</string>
 			<key>Identifier</key>
-			<string>screenName</string>
+			<string>controllerName</string>
 			<key>Name</key>
-			<string>Screen Name:</string>
+			<string>Controler Name:</string>
 			<key>NotPersisted</key>
 			<true/>
 			<key>Required</key>
@@ -26,15 +26,15 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_screenName:identifier___</string>
+			<string>___VARIABLE_controllerName:identifier___</string>
 			<key>Identifier</key>
-			<string>screenIdentifier</string>
+			<string>controllerIdentifier</string>
 			<key>Type</key>
 			<string>static</string>
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_screenIdentifier___ViewController</string>
+			<string>___VARIABLE_controllerIdentifier___ViewController</string>
 			<key>Description</key>
 			<string>The view controller name</string>
 			<key>Identifier</key>
@@ -50,7 +50,7 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_screenIdentifier___ViewModel</string>
+			<string>___VARIABLE_controllerIdentifier___ViewModel</string>
 			<key>Description</key>
 			<string>The view model name</string>
 			<key>Identifier</key>
@@ -66,7 +66,7 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_screenIdentifier___ViewModelTests</string>
+			<string>___VARIABLE_controllerIdentifier___ViewModelTests</string>
 			<key>Description</key>
 			<string>The test's name</string>
 			<key>Identifier</key>
@@ -88,7 +88,7 @@
 	<key>SortOrder</key>
 	<string>9</string>
 	<key>Summary</key>
-	<string>This generates a new scene using The Funtasty MVVM-C architecture.</string>
+	<string>This template generates a new controller using the Kickstarter architecture.</string>
 </dict>
 </plist>
 <!--https://github.com/thefuntasty/MVVM-C-Templates/blob/master/MVVM-C%20Scene.xctemplate/___VARIABLE_sceneIdentifier___.storyboard-->

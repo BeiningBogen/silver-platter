@@ -10,9 +10,9 @@ import XCTest
 import ReactiveCocoa
 import ReactiveSwift
 
-class ___VARIABLE_screenIdentifier___ViewModelTests: XCTestCase {
+class ___VARIABLE_controllerIdentifier___ViewModelTests: XCTestCase {
 
-    let viewModel = ___VARIABLE_screenIdentifier___ViewModel()
+    let viewModel = ___VARIABLE_controllerIdentifier___ViewModel()
 
     let test = TestObserver<String, NoError>()
 

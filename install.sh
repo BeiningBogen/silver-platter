@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #User input
-
 read -p "Project name: " PROJECTNAME
 read -e -p "Project path: " PROJECTPATH
 #read -e -p "Author: " author
