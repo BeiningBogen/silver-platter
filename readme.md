@@ -3,7 +3,7 @@
 </p>
 
 ## Silver Platter for XCode
-Stuff stuff.
+Silver Platter contains xcode file templates and a script for creating functional reactive projects quickly.
 
 ## Getting Started
 
