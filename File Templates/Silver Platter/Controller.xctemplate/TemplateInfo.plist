@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DefaultCompletionName</key>
+	<string>Controller</string>
+	<key>Description</key>
+	<string>This generates a new controller using the Kickstarter architecture. The controller consists of one viewcontroller, one viewmodel, and one viewmodeltest.</string>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Description</key>
+			<string>Controller name</string>
+			<key>Identifier</key>
+			<string>controllerName</string>
+			<key>Name</key>
+			<string>Controler Name:</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_controllerName:identifier___</string>
+			<key>Identifier</key>
+			<string>controllerIdentifier</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_controllerIdentifier___ViewController</string>
+			<key>Description</key>
+			<string>The view controller name</string>
+			<key>Identifier</key>
+			<string>viewControllerName</string>
+			<key>Name</key>
+			<string>View Controller Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_controllerIdentifier___ViewModel</string>
+			<key>Description</key>
+			<string>The view model name</string>
+			<key>Identifier</key>
+			<string>viewModelName</string>
+			<key>Name</key>
+			<string>ViewModel Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_controllerIdentifier___ViewModelTests</string>
+			<key>Description</key>
+			<string>The test's name</string>
+			<key>Identifier</key>
+			<string>testName</string>
+			<key>Name</key>
+			<string>Test Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+	</array>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+	<key>SortOrder</key>
+	<string>9</string>
+	<key>Summary</key>
+	<string>This template generates a new controller using the Kickstarter architecture.</string>
+</dict>
+</plist>
+<!--https://github.com/thefuntasty/MVVM-C-Templates/blob/master/MVVM-C%20Scene.xctemplate/___VARIABLE_sceneIdentifier___.storyboard-->

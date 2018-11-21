@@ -6,3 +6,6 @@ The templates are now copied and ready to be used with XCode.
 Run ./install.sh.
 Build all the targets separately in xcode.
 You're all set!
+
+Note:
+When using our file templates you have to manually change the target for each of the generated files.
