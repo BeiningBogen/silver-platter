@@ -10,21 +10,21 @@ Silver Platter contains useful Functional Reactive Programming (FRP) Xcode file 
 
 ### Installing file templates 
 1. Clone or download this repository.
-2. On the command line, cd into the silver-platter directory and run `make`
-3. In the bottom of the new file dialogue in Xcode, there should be a new section with Silver Platter templates
+2. In the command line, `cd` into the silver-platter directory and run `make`.
+3. In the bottom of the new file dialogue in Xcode, there should now be a new section with Silver Platter templates.
 <p align="center">
   <img src="https://github.com/BeiningBogen/silver-platter/blob/master/resources/newfile-silverplatter.png">
 </p>
 
-> For the controller template (which generates several files), you have to check off target membership manually if your project has multiple targets
+> The controller and tableview templates generate several files. If your project has multiple targets, you have to alter the target membership manually on these files.
 
 
 ### Creating a new functional reactive Xcode project
-1. On the command line, cd into the silver-platter directory and run `./install.sh`
-2. When first opening the generated new project, you should build all targets separately
+1. In the command line, `cd` into the silver-platter directory and run `./install.sh`.
+2. When first opening the newly generated project, you should build all targets separately.
 
 
-## Like Functional Reactive Programming?
+## Do you like Functional Reactive Programming?
 
 So do we. [Join us!](https://beiningbogen.no/om-oss/)
 
