@@ -72,15 +72,19 @@ cp $EXAMPLEPROJECT/Podfile $PROJECTDIR/Podfile
 #Replace ___PROJECTNAME___ in file content
 find $PROJECTDIR -type f \( -name \*.swift -o -name \*.h -o -name \Podfile -o -name \*.xcworkspacedata -o -name \*.xcscheme -o -name \*.pbxproj \) -print0 | xargs -0 sed -i '' 's/___PROJECTNAME___/'$PROJECTNAME'/g'
 
+#Replace "-" in imports
+sed -i 's/-/_/g' $PROJECTDIR'/'$PROJECTNAME'Framework/Library/Environment.swift'
+
 #Replace ___FULLUSERNAME___ in file content
 
 #Replace ___DATE___ in file content
 
+#Pod install
+cd "$PROJECTDIR"
+
 #Clean project
 xcodebuild clean
 
-#Pod install
-cd "$PROJECTDIR"
 pod install
 
 #Build targets
