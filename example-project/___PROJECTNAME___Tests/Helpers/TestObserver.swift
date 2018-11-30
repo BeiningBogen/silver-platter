@@ -1,3 +1,17 @@
+Copyright 2018 Kickstarter, PBC.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
 import XCTest
 import ReactiveSwift
 
@@ -6,51 +20,51 @@ import ReactiveSwift
  assertions can be made on a signal's behavior. To use, just create an instance of `TestObserver` that
  matches the type of signal/producer you are testing, and observer/start your signal by feeding it the
  wrapped observer. For example,
- 
+
  ```
  let test = TestObserver<Int, NoError>()
  mySignal.observer(test.observer)
- 
+
  // ... later ...
- 
+
  test.assertValues([1, 2, 3])
  ```
  */
 internal final class TestObserver <Value, Error: Swift.Error> {
-    
+
     internal private(set) var events: [Signal<Value, Error>.Event] = []
     internal private(set) var observer: Signal<Value, Error>.Observer!
-    
+
     internal init() {
         self.observer = Signal<Value, Error>.Observer(action)
     }
-    
+
     private func action(_ event: Signal<Value, Error>.Event) {
         self.events.append(event)
     }
-    
+
     /// Get all of the next values emitted by the signal.
     internal var values: [Value] {
         return self.events
             .filter { $0.value != nil }
             .map { $0.value! }
     }
-    
+
     /// Get the last value emitted by the signal.
     internal var lastValue: Value? {
         return self.values.last
     }
-    
+
     /// `true` if at least one `.Next` value has been emitted.
     internal var didEmitValue: Bool {
         return self.values.count > 0
     }
-    
+
     /// `true` if a `.Completed` event has been emitted.
     internal var didComplete: Bool {
         return self.events.filter { $0.isCompleted }.count > 0
     }
-    
+
     /// `true` if a .Interrupt` event has been emitted.
 //    internal var didInterrupt: Bool {
 //        return self.events.filter { $0.isInterrupted }.count > 0
@@ -60,7 +74,7 @@ internal final class TestObserver <Value, Error: Swift.Error> {
                                     file: StaticString = #file, line: UInt = #line) {
         XCTAssertTrue(self.didComplete, message, file: file, line: line)
     }
-    
+
 //    internal func assertDidFail(_ message: String = "Should have failed.",
 //                                file: StaticString = #file, line: UInt = #line) {
 //        XCTAssertTrue(self.didFail, message, file: file, line: line)
@@ -70,7 +84,7 @@ internal final class TestObserver <Value, Error: Swift.Error> {
 //                                   file: StaticString = #file, line: UInt = #line) {
 //        XCTAssertFalse(self.didFail, message, file: file, line: line)
 //    }
-    
+
 //    internal func assertDidInterrupt(_ message: String = "Should have failed.",
 //                                     file: StaticString = #file, line: UInt = #line) {
 //        XCTAssertTrue(self.didInterrupt, message, file: file, line: line)
@@ -80,17 +94,17 @@ internal final class TestObserver <Value, Error: Swift.Error> {
 //                                        file: StaticString = #file, line: UInt = #line) {
 //        XCTAssertFalse(self.didInterrupt, message, file: file, line: line)
 //    }
-    
+
     internal func assertDidNotComplete(_ message: String = "Should not have completed",
                                        file: StaticString = #file, line: UInt = #line) {
         XCTAssertFalse(self.didComplete, message, file: file, line: line)
     }
-    
+
     internal func assertDidEmitValue(_ message: String = "Should have emitted at least one value.",
                                      file: StaticString = #file, line: UInt = #line) {
         XCTAssert(self.values.count > 0, message, file: file, line: line)
     }
-    
+
     internal func assertDidNotEmitValue(_ message: String = "Should not have emitted any values.",
                                         file: StaticString = #file, line: UInt = #line) {
         XCTAssertEqual(0, self.values.count, message, file: file, line: line)
@@ -107,7 +121,7 @@ internal final class TestObserver <Value, Error: Swift.Error> {
 //        file: StaticString = #file, line: UInt = #line) {
 //        XCTAssertTrue(!self.didFail && !self.didComplete && !self.didInterrupt, message, file: file, line: line)
 //    }
-    
+
     internal func assertValueCount(_ count: Int, _ message: String? = nil,
                                    file: StaticString = #file, line: UInt = #line) {
         XCTAssertEqual(count, self.values.count, message ?? "Should have emitted \(count) values",
@@ -122,13 +136,13 @@ extension TestObserver where Value: Equatable {
         XCTAssertEqual(value, self.lastValue, message ?? "A single value of \(value) should have been emitted",
             file: file, line: line)
     }
-    
+
     internal func assertLastValue(_ value: Value, _ message: String? = nil,
                                   file: StaticString = #file, line: UInt = #line) {
         XCTAssertEqual(value, self.lastValue, message ?? "Last emitted value is equal to \(value).",
             file: file, line: line)
     }
-    
+
     internal func assertValues(_ values: [Value], _ message: String = "",
                                file: StaticString = #file, line: UInt = #line) {
         XCTAssertEqual(values, self.values, message, file: file, line: line)
