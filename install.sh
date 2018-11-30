@@ -7,8 +7,7 @@ read -e -p "Project path: " PROJECTPATH
 
 if [[ $PROJECTPATH != *"/" ]] ;
 then
-    echo "Please include a '/' at the end of your path."
-    exit 1
+    PROJECTPATH="$PROJECTPATH/"
 fi
 
 EXAMPLEPROJECT=example-project
