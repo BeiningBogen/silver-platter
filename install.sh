@@ -5,6 +5,12 @@ read -p "Project name: " PROJECTNAME
 read -e -p "Project path: " PROJECTPATH
 #read -e -p "Author: " author
 
+if [[ $PROJECTPATH != *"/" ]] ;
+then
+    echo "Please include a '/' at the end of your path."
+    exit 1
+fi
+
 EXAMPLEPROJECT=example-project
 PROJECTDIR=$PROJECTPATH$PROJECTNAME
 
@@ -14,7 +20,8 @@ read -p "Install $PROJECTNAME in $PROJECTDIR ? " yesorno
 if [ $yesorno != "y" ] && [ $yesorno != "yes" ] ;
 then
   echo "Install cancelled."
-else
+  exit 1
+fi
 
 echo "Copying xcode template to $PROJECTDIR"
 
@@ -85,5 +92,3 @@ xcodebuild -target $PROJECTNAME
 #Open workspace
 echo "Install complete, opening workspace file."
 open $PROJECTDIR'/'$PROJECTNAME'.xcworkspace'
-
-fi
