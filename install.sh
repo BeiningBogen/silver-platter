@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#Delete derived data
+read -p "Delete derived data? It is highly recommended. (yes or no) " deleteDerived
+
+if [ $deleteDerived == "y" ] || [ $deleteDerived == "yes" ] ;
+then
+  rm -rf $HOME'/Library/Developer/Xcode/DerivedData'
+fi
+
 #User input
 read -p "Project name: " PROJECTNAME
 read -e -p "Project path: " PROJECTPATH
@@ -14,7 +22,7 @@ EXAMPLEPROJECT=example-project
 PROJECTDIR=$PROJECTPATH$PROJECTNAME
 
 #some prompt before we begin
-read -p "Install $PROJECTNAME in $PROJECTDIR ? " yesorno
+read -p "Install $PROJECTNAME in $PROJECTDIR ? (yes or no) " yesorno
 
 if [ $yesorno != "y" ] && [ $yesorno != "yes" ] ;
 then
