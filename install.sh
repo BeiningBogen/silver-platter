@@ -73,7 +73,9 @@ cp $EXAMPLEPROJECT/Podfile $PROJECTDIR/Podfile
 find $PROJECTDIR -type f \( -name \*.swift -o -name \*.h -o -name \Podfile -o -name \*.xcworkspacedata -o -name \*.xcscheme -o -name \*.pbxproj \) -print0 | xargs -0 sed -i '' 's/___PROJECTNAME___/'$PROJECTNAME'/g'
 
 #Replace "-" in imports
-sed -i 's/-/_/g' $PROJECTDIR'/'$PROJECTNAME'Framework/Library/Environment.swift'
+sed -i '' '/import/s/\-/\_/g' $PROJECTDIR'/'$PROJECTNAME'Framework/Library/Environment.swift'
+sed -i '' '/import/s/\-/\_/g' $PROJECTDIR'/'$PROJECTNAME'/AppDelegate.swift'
+sed -i '' '/import/s/\-/\_/g' $PROJECTDIR'/'$PROJECTNAME'Framework/Library/AppEnvironment.swift'
 
 #Replace ___FULLUSERNAME___ in file content
 
