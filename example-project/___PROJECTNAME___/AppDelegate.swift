@@ -9,7 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        /*DO not run the application when the tests are running.*/
+        /*Do not run the application when the tests are running.*/
         if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil { return true }
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
