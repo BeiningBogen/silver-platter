@@ -1,7 +1,6 @@
 import Foundation
 import ReactiveSwift
 import ReactiveCocoa
-import SwiftyStoreKit
 
 public struct Service : ServiceType {
 

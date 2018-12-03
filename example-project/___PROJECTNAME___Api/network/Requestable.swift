@@ -4,47 +4,37 @@ import ReactiveSwift
 import Result
 
 public enum HTTPMethod: String {
-
     case get = "GET"
     case post = "POST"
     case put = "PUT"
     case patch = "PATCH"
     case delete = "DELETE"
-
 }
 public struct BasicHTTPAuth {
-
     public let username: String
     public let password: String
 
     public init(username: String, password: String) {
-
         self.username = username
         self.password = password
 
     }
 
     public var authorizationHeader: [String: String] {
-
         let credentialData = "\(username):\(password)".data(using: String.Encoding.utf8)!
         let base64Credentials = credentialData.base64EncodedString(options: Data.Base64EncodingOptions.lineLength76Characters)
         let header = ["Authorization": "Basic \(base64Credentials)"]
 
         return header
-
     }
-
 }
 
 public protocol ServerConfigType {
-
     var baseURL: URL { get }
     var basicHTTPAuth: BasicHTTPAuth? { get }
-
 }
 
 public struct ServerConfig: ServerConfigType {
-
     public private(set) var basicHTTPAuth: BasicHTTPAuth?
     public let baseURL: URL
 
@@ -52,17 +42,10 @@ public struct ServerConfig: ServerConfigType {
 
         self.baseURL = baseURL
         self.basicHTTPAuth = basicHTTPAuth
-        //        self.clientId = String.random(length: 13)
-
     }
 
     public static let local : ServerConfig = ServerConfig.init(baseURL: URL(string: "http://localhost:8080")!, basicHTTPAuth: nil)
-
-//    https://raw.githubusercontent.com/BeiningBogen/chesterfield-backend-react/master/chesterfield-backend-react/test.raw
-
-    //https://chesterfield-cleanserver.herokuapp.com/themes/Jakt&V%C3%A5pen
-
-    public static let staging : ServerConfig = ServerConfig.init(baseURL: URL(string: "https://chesterfield-cleanserver.herokuapp.com/")!, basicHTTPAuth: nil)
+    public static let staging : ServerConfig = ServerConfig.init(baseURL: URL(string: "http://localhost:8080")!, basicHTTPAuth: nil)
 
 }
 
@@ -76,7 +59,6 @@ extension Never: Encodable {
 }
 
 public enum RequestableParameterEncoding {
-
     case query
     case json
     case custom(contentType: String, transform: (Data) throws -> Data?)
@@ -94,7 +76,6 @@ public enum RequestableParameterEncoding {
 }
 
 public enum RequestableError: Error, CustomDebugStringConvertible {
-
     case invalidUrl(components: URLComponents)
     case encoding(error: EncodingError)
     case decoding(error: DecodingError, data: Data)
@@ -123,28 +104,6 @@ public enum RequestableError: Error, CustomDebugStringConvertible {
             return description
         case .shopError(error: let error):
             return String(describing: error)
-            /*
-
-
-             switch error.code {
-             case .unknown: print("Unknown error. Please contact support")
-             case .clientInvalid: print("Not allowed to make the payment")
-             case .paymentCancelled: break
-             case .paymentInvalid: print("The purchase identifier was invalid")
-             case .paymentNotAllowed: print("The device is not allowed to make the payment")
-             case .storeProductNotAvailable: print("The product is not available in the current storefront")
-             case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
-             case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
-             case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
-             }
-
-
-
-
-
-
-
-             */
         }
     }
 }
@@ -164,7 +123,6 @@ public protocol Requestable {
 }
 
 extension Requestable {
-
     public static var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy {
         return .deferredToDate
     }
@@ -201,7 +159,6 @@ extension Requestable {
 }
 
 extension Requestable {
-
     internal static func requestData(serverConfig: ServerConfigType, path: Path, parameters: Parameter?, sessionConfig: URLSessionConfiguration? = nil) -> SignalProducer<Data, RequestableError> {
 
         return SignalProducer<Data, RequestableError> { observer, lifetime in
@@ -372,7 +329,6 @@ extension Requestable where Response == Data {
 }
 
 extension Requestable where Response == Data, Parameter == Never {
-
     public static func request(serverConfig: ServerConfigType, path: Path, sessionConfig: URLSessionConfiguration? = nil) -> SignalProducer<Response, RequestableError> {
         return requestData(serverConfig: serverConfig, path: path, parameters: nil, sessionConfig: sessionConfig)
     }
@@ -387,7 +343,6 @@ extension Requestable where Response: Decodable {
 
 
 extension Requestable where Response: Decodable, Parameter == Never {
-
     public static func request(service: ServiceType, path: Path, sessionConfig: URLSessionConfiguration? = nil) -> SignalProducer<Response, RequestableError> {
 
         return requestData(serverConfig: service.serverConfig, path: path, parameters: nil, sessionConfig: sessionConfig)
