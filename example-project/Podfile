@@ -26,32 +26,27 @@ def downgrade_swift
     end
 end
 
-target '___PROJECTNAME___' do
-  pod "Cartography"
-  pod "ReactiveSwift"
-  pod "ReactiveCocoa"
-  pod "Result"
-end
-
-target '___PROJECTNAME___Tests' do
-    inherit! :search_paths
+def all_pods
     pod "Cartography"
     pod "ReactiveSwift"
     pod "ReactiveCocoa"
     pod "Result"
+end
+
+target '___PROJECTNAME___' do
+    all_pods
+  end
+
+target '___PROJECTNAME___Tests' do
+    all_pods
+    inherit! :search_paths
 end
 
 target '___PROJECTNAME___Framework' do
-    pod "Cartography"
-    pod "ReactiveCocoa"
-    pod "ReactiveSwift"
-    pod "Result"
+    all_pods
     downgrade_swift
 end
 
 target '___PROJECTNAME___Api' do
-    pod "Cartography"
-    pod "ReactiveCocoa"
-    pod "ReactiveSwift"
-    pod "Result"
+    all_pods
 end
