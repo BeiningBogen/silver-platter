@@ -153,6 +153,7 @@
 		0A22B2E620E586C4008E1F35 /* ___PROJECTNAME___Framework */ = {
 			isa = PBXGroup;
 			children = (
+				F1ABCB2E2188B54700D0BD9B /* valueCell */,
 				0A6F45F420F9EF8B0062D5BE /* Library */,
 				0A22B2E720E586C4008E1F35 /* ___PROJECTNAME___Framework.h */,
 				0A22B2E820E586C4008E1F35 /* Info.plist */,
@@ -207,7 +208,6 @@
 		0A550C7420F62B2700F69F67 /* ___PROJECTNAME___Api */ = {
 			isa = PBXGroup;
 			children = (
-				F1ABCB2E2188B54700D0BD9B /* valueCell */,
 				0A550C7920F62B2700F69F67 /* ___PROJECTNAME___Api.h */,
 				0A550C7B20F62B2700F69F67 /* Info.plist */,
 				F17F5C6E213436D70082A36F /* network */,

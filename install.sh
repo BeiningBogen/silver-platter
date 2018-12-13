@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#Delete derived data
+read -p "Delete derived data? It is highly recommended. (yes or no) " deleteDerived
+
+if [ $deleteDerived == "y" ] || [ $deleteDerived == "yes" ] ;
+then
+  rm -rf $HOME'/Library/Developer/Xcode/DerivedData'
+fi
+
 #User input
 read -p "Project name: " PROJECTNAME
 read -e -p "Project path: " PROJECTPATH
@@ -14,7 +22,7 @@ EXAMPLEPROJECT=example-project
 PROJECTDIR=$PROJECTPATH$PROJECTNAME
 
 #some prompt before we begin
-read -p "Install $PROJECTNAME in $PROJECTDIR ? " yesorno
+read -p "Install $PROJECTNAME in $PROJECTDIR ? (yes or no) " yesorno
 
 if [ $yesorno != "y" ] && [ $yesorno != "yes" ] ;
 then
@@ -33,13 +41,13 @@ cp -r $EXAMPLEPROJECT/___PROJECTNAME___ $PROJECTDIR/$PROJECTNAME
 #Api target
 mkdir $PROJECTDIR/$PROJECTNAME'Api'
 cp -r $EXAMPLEPROJECT/___PROJECTNAME___Api/network $PROJECTDIR/$PROJECTNAME'Api'/network
-cp -r $EXAMPLEPROJECT/___PROJECTNAME___Api/valueCell $PROJECTDIR/$PROJECTNAME'Api'/valueCell
 cp $EXAMPLEPROJECT/___PROJECTNAME___Api/___PROJECTNAME___Api.h $PROJECTDIR/$PROJECTNAME'Api'/$PROJECTNAME'Api'.h
 cp $EXAMPLEPROJECT/___PROJECTNAME___Api/Info.plist $PROJECTDIR/$PROJECTNAME'Api'/Info.plist
 
 #Framework target
 mkdir $PROJECTDIR/$PROJECTNAME'Framework'
 cp -r $EXAMPLEPROJECT/___PROJECTNAME___Framework/Library $PROJECTDIR/$PROJECTNAME'Framework'/Library
+cp -r $EXAMPLEPROJECT/___PROJECTNAME___Framework/valueCell $PROJECTDIR/$PROJECTNAME'Framework'/valueCell
 
 cp $EXAMPLEPROJECT/___PROJECTNAME___Framework/___PROJECTNAME___Framework.h $PROJECTDIR/$PROJECTNAME'Framework'/$PROJECTNAME'Framework.h'
 cp $EXAMPLEPROJECT/___PROJECTNAME___Framework/Info.plist $PROJECTDIR/$PROJECTNAME'Framework'/Info.plist
@@ -72,15 +80,21 @@ cp $EXAMPLEPROJECT/Podfile $PROJECTDIR/Podfile
 #Replace ___PROJECTNAME___ in file content
 find $PROJECTDIR -type f \( -name \*.swift -o -name \*.h -o -name \Podfile -o -name \*.xcworkspacedata -o -name \*.xcscheme -o -name \*.pbxproj \) -print0 | xargs -0 sed -i '' 's/___PROJECTNAME___/'$PROJECTNAME'/g'
 
+#Replace "-" in imports
+sed -i '' '/import/s/\-/\_/g' $PROJECTDIR'/'$PROJECTNAME'Framework/Library/Environment.swift'
+sed -i '' '/import/s/\-/\_/g' $PROJECTDIR'/'$PROJECTNAME'/AppDelegate.swift'
+sed -i '' '/import/s/\-/\_/g' $PROJECTDIR'/'$PROJECTNAME'Framework/Library/AppEnvironment.swift'
+
 #Replace ___FULLUSERNAME___ in file content
 
 #Replace ___DATE___ in file content
 
+#Pod install
+cd "$PROJECTDIR"
+
 #Clean project
 xcodebuild clean
 
-#Pod install
-cd "$PROJECTDIR"
 pod install
 
 #Build targets
