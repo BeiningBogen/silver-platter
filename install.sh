@@ -80,10 +80,16 @@ cp $EXAMPLEPROJECT/Podfile $PROJECTDIR/Podfile
 #Replace ___PROJECTNAME___ in file content
 find $PROJECTDIR -type f \( -name \*.swift -o -name \*.h -o -name \Podfile -o -name \*.xcworkspacedata -o -name \*.xcscheme -o -name \*.pbxproj \) -print0 | xargs -0 sed -i '' 's/___PROJECTNAME___/'$PROJECTNAME'/g'
 
-#Replace "-" in imports
+#Replace "-" with "_" in imports
 sed -i '' '/import/s/\-/\_/g' $PROJECTDIR'/'$PROJECTNAME'Framework/Library/Environment.swift'
 sed -i '' '/import/s/\-/\_/g' $PROJECTDIR'/'$PROJECTNAME'/AppDelegate.swift'
 sed -i '' '/import/s/\-/\_/g' $PROJECTDIR'/'$PROJECTNAME'Framework/Library/AppEnvironment.swift'
+
+#Replace "-" with "_" in test imports
+sed -i '' '/@testable import/s/\-/\_/g' $PROJECTDIR'/'$PROJECTNAME'/example/tableView/Cell/ExampleCellViewModelTests.swift'
+sed -i '' '/@testable import/s/\-/\_/g' $PROJECTDIR'/'$PROJECTNAME'/example/tableView/Cell/ExampleCell2ViewModelTests.swift'
+sed -i '' '/@testable import/s/\-/\_/g' $PROJECTDIR'/'$PROJECTNAME'/example/ExampleViewModelTests.swift'
+sed -i '' '/@testable import/s/\-/\_/g' $PROJECTDIR'/'$PROJECTNAME'/example/tableView/ExampleTableViewModelTests.swift'
 
 #Replace ___FULLUSERNAME___ in file content
 
