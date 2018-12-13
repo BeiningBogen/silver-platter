@@ -26,23 +26,7 @@ def downgrade_swift
     end
 end
 
-target '___PROJECTNAME___' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-
-
-  pod "Cartography"
-  pod "ReactiveSwift"
-  pod "ReactiveCocoa"
-  pod "Result"
-  pod "SwiftyStoreKit"
-  pod "MBProgressHUD"
-  # Pods for Chesterfield
-
-  end
-
-target '___PROJECTNAME___Tests' do
-    inherit! :search_paths
-    # Pods for testing
+def all_pods
     pod "Cartography"
     pod "ReactiveSwift"
     pod "ReactiveCocoa"
@@ -51,25 +35,20 @@ target '___PROJECTNAME___Tests' do
     pod "MBProgressHUD"
 end
 
+target '___PROJECTNAME___' do
+    all_pods
+  end
+
+target '___PROJECTNAME___Tests' do
+    all_pods
+    inherit! :search_paths
+end
 
 target '___PROJECTNAME___Framework' do
-
-    pod "Cartography"
-   pod "ReactiveCocoa"
-   pod "ReactiveSwift"
-   pod "Result"
-   pod "MBProgressHUD"
-   pod "SwiftyStoreKit"
+    all_pods
     downgrade_swift
-
 end
 
 target '___PROJECTNAME___Api' do
-
-    pod "Cartography"
-    pod "ReactiveCocoa"
-    pod "ReactiveSwift"
-    pod "Result"
-    pod "SwiftyStoreKit"
-
+    all_pods
 end

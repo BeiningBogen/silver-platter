@@ -1,3 +1,4 @@
+/*
 Copyright 2018 Kickstarter, PBC.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,6 +12,7 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+*/
 
 /// A type that represents a cell that can be reused and configured with a value.
 public protocol ValueCell: class {
