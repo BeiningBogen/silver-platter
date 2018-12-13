@@ -31,8 +31,6 @@ def all_pods
     pod "ReactiveSwift"
     pod "ReactiveCocoa"
     pod "Result"
-    pod "SwiftyStoreKit"
-    pod "MBProgressHUD"
 end
 
 target '___PROJECTNAME___' do

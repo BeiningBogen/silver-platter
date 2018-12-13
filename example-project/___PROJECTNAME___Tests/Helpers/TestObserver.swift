@@ -1,16 +1,16 @@
-Copyright 2018 Kickstarter, PBC.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+// Copyright 2018 Kickstarter, PBC.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
 import XCTest
 import ReactiveSwift
@@ -65,35 +65,10 @@ internal final class TestObserver <Value, Error: Swift.Error> {
         return self.events.filter { $0.isCompleted }.count > 0
     }
 
-    /// `true` if a .Interrupt` event has been emitted.
-//    internal var didInterrupt: Bool {
-//        return self.events.filter { $0.isInterrupted }.count > 0
-//    }
-//
     internal func assertDidComplete(_ message: String = "Should have completed.",
                                     file: StaticString = #file, line: UInt = #line) {
         XCTAssertTrue(self.didComplete, message, file: file, line: line)
     }
-
-//    internal func assertDidFail(_ message: String = "Should have failed.",
-//                                file: StaticString = #file, line: UInt = #line) {
-//        XCTAssertTrue(self.didFail, message, file: file, line: line)
-//    }
-//
-//    internal func assertDidNotFail(_ message: String = "Should not have failed.",
-//                                   file: StaticString = #file, line: UInt = #line) {
-//        XCTAssertFalse(self.didFail, message, file: file, line: line)
-//    }
-
-//    internal func assertDidInterrupt(_ message: String = "Should have failed.",
-//                                     file: StaticString = #file, line: UInt = #line) {
-//        XCTAssertTrue(self.didInterrupt, message, file: file, line: line)
-//    }
-//
-//    internal func assertDidNotInterrupt(_ message: String = "Should not have failed.",
-//                                        file: StaticString = #file, line: UInt = #line) {
-//        XCTAssertFalse(self.didInterrupt, message, file: file, line: line)
-//    }
 
     internal func assertDidNotComplete(_ message: String = "Should not have completed",
                                        file: StaticString = #file, line: UInt = #line) {
@@ -149,9 +124,4 @@ extension TestObserver where Value: Equatable {
     }
 }
 
-extension TestObserver where Error: Equatable {
-//    internal func assertFailed(_ expectedError: Error, message: String = "",
-//                               file: StaticString = #file, line: UInt = #line) {
-//        XCTAssertEqual(expectedError, self.failedError, message, file: file, line: line)
-//    }
-}
+extension TestObserver where Error: Equatable {}
