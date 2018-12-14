@@ -21,7 +21,8 @@ Silver Platter contains useful Functional Reactive Programming (FRP) Xcode file 
 
 ### Creating a new functional reactive Xcode project
 1. In the command line, `cd` into the silver-platter directory and run `./install.sh`.
-2. When first opening the newly generated project, you should build all targets separately.
+2. Follow the instructions on screen. When asked for a project path, please speficy a complete path without `~`.
+3. When first opening the newly generated project, you should build all targets separately.
 
 
 ## Do you like Functional Reactive Programming?
