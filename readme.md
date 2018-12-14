@@ -3,7 +3,7 @@
 </p>
 
 ## Silver Platter for Xcode
-Silver Platter contains useful Functional Reactive Programming (FRP) Xcode file templates and a script for creating a new FRP Xcode project from scratch. These templates are based on the open source Kickstarter iOS app way of laying out [ViewModels](https://github.com/kickstarter/native-docs/blob/master/vm-structure.md) as a pure mapping of input signals to output signals.
+Silver Platter contains useful Functional Reactive Programming (FRP) Xcode file templates and a script for creating new FRP Xcode projects from scratch. These templates are based on the open source Kickstarter iOS app way of laying out [ViewModels](https://github.com/kickstarter/native-docs/blob/master/vm-structure.md) as a pure mapping of input signals to output signals.
 
 ## How to use
  
