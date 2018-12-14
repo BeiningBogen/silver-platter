@@ -1,25 +1,25 @@
 //
-// ___FILENAME___
-// ___PROJECTNAME___
+//  ___FILENAME___
+//  ___PROJECTNAME___
 //
-// Created by ___FULLUSERNAME___ on ___DATE___.
-//___COPYRIGHT___
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  ___COPYRIGHT___
 //
 
 import XCTest
 import ReactiveCocoa
 import ReactiveSwift
 
-class ___FILEBASENAMEASIDENTIFIER___: XCTestCase {
+class ___VARIABLE_productName___: XCTestCase {
 
-    let viewModel = //Fill in viewmodel here
+    let viewModel = ___VARIABLE_viewModelName___()
 
-    let test = TestObserver<String, NoError>()
+    //Place output fields
 
     override func setUp() {
         super.setUp()
 
-        viewModel.outputs./*viewmodel output*/.observe(test.observer)
+        //Observe output fields
     }
 
     override func tearDown() {
@@ -27,6 +27,6 @@ class ___FILEBASENAMEASIDENTIFIER___: XCTestCase {
     }
 
     func testExample() {
-
+        //Assert output fields
     }
 }
