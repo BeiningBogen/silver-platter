@@ -11,12 +11,12 @@ import ReactiveCocoa
 import ReactiveSwift
 import Result
 
-@testable import ___VARIABLE_productName___Framework
-@testable import ___VARIABLE_productName___Api
+@testable import ___PROJECTNAME___Framework
+@testable import ___PROJECTNAME___Api
 
 class ___VARIABLE_tableViewIdentifier___ViewModelTests: XCTestCase {
 
-    let viewModel = ___VARIABLE_tableViewIdentifier___()
+    let viewModel = ___VARIABLE_tableViewIdentifier___TableViewModel()
     let goBack = TestObserver<Void, NoError>()
 
     override func setUp() {

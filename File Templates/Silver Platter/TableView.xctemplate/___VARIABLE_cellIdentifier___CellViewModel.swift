@@ -11,7 +11,7 @@ import ReactiveSwift
 import Result
 
 public protocol ___VARIABLE_cellIdentifier___CellViewModelInputs {
-    func configureWith(example: String)
+    func configureWith(value: ___VARIABLE_cellType___)
 }
 
 public protocol ___VARIABLE_cellIdentifier___CellViewModelOutputs {
@@ -30,8 +30,8 @@ class ___VARIABLE_cellIdentifier___CellViewModel: ___VARIABLE_cellIdentifier___C
     }
 
     private let configureWithProperty = MutableProperty<String?>(nil)
-    func configureWith(example: String) {
-        configureWithProperty.value = example
+    func configureWith(value: ___VARIABLE_cellType___) {
+        configureWithProperty.value = value
     }
 
     public let title: Signal<String, NoError>

@@ -17,7 +17,7 @@ class ___VARIABLE_tableViewIdentifier___TableViewDataSource: ValueCellDataSource
     }
 
     override func configureCell(tableCell cell: UITableViewCell, withValue value: Any) {
-        if let cell = cell as ___VARIABLE_cellIdentifier___Cell {
+        if let cell = cell as? ___VARIABLE_cellIdentifier___Cell {
             if let value = value as? String {
                 cell.configureWith(value: value)
             }
