@@ -10,7 +10,7 @@ import XCTest
 import ReactiveCocoa
 import ReactiveSwift
 
-class ___VARIABLE_productName___: XCTestCase {
+class ___VARIABLE_viewModelNameIdentifier___Tests: XCTestCase {
 
     let viewModel = ___VARIABLE_viewModelName___()
 

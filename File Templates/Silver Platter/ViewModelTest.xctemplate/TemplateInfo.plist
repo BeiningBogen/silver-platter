@@ -18,7 +18,7 @@
 	<string>___FILEBASENAME___.swift</string>
 	<key>Options</key>
 	<array>
-		<dict>
+		<!-- <dict>
 			<key>Description</key>
 			<string>Name of the Test class (include ViewModel in the name)</string>
 			<key>Suffixes</key>
@@ -47,7 +47,55 @@
 			<string>text</string>
 			<key>NotPersisted</key>
 			<true/>
+		</dict> -->
+
+
+
+
+
+
+
+
+
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_viewModelNameIdentifier___Tests</string>
+			<key>Description</key>
+			<string>The view model test name</string>
+			<key>Identifier</key>
+			<string>viewModelTestName</string>
+			<key>Name</key>
+			<string>View Model Test Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+			<key>NotPersisted</key>
+			<true/>
 		</dict>
+		<dict>
+			<key>Description</key>
+			<string>View model name</string>
+			<key>Identifier</key>
+			<string>viewModelName</string>
+			<key>Name</key>
+			<string>View Model Name:</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_viewModelName:identifier___</string>
+			<key>Identifier</key>
+			<string>viewModelNameIdentifier</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+
 	</array>
 </dict>
 </plist>
