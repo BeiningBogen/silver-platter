@@ -12,11 +12,10 @@ import ReactiveSwift
 import Result
 
 @testable import ___PROJECTNAME___Framework
-@testable import ___PROJECTNAME___Api
 
-class ___VARIABLE_tableViewIdentifier___TableViewModelTests: XCTestCase {
+class ___VARIABLE_cellIdentifier___CellViewModelTests: XCTestCase {
 
-    let viewModel = ___VARIABLE_tableViewIdentifier___TableViewModel()
+    let viewModel = ___VARIABLE_cellIdentifier___CellViewModel()
 
     override func setUp() {
         super.setUp()
