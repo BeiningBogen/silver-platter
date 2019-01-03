@@ -10,21 +10,21 @@ import ReactiveCocoa
 import ReactiveSwift
 import Result
 
-public protocol ___VARIABLE_tableViewIdentifier___TableViewModelInputs {
+public protocol ___VARIABLE_tableViewIdentifier___ViewModelInputs {
     func viewDidLoad()
     func configure(texts: [String])
 }
 
-public protocol ___VARIABLE_tableViewIdentifier___TableViewModelOutputs {
+public protocol ___VARIABLE_tableViewIdentifier___ViewModelOutputs {
     var cells: Signal<[String], NoError> { get }
 }
 
-public protocol ___VARIABLE_tableViewIdentifier___TableViewModelType {
-    var inputs: ___VARIABLE_tableViewIdentifier___TableViewModelInputs { get }
-    var outputs: ___VARIABLE_tableViewIdentifier___TableViewModelOutputs { get }
+public protocol ___VARIABLE_tableViewIdentifier___ViewModelType {
+    var inputs: ___VARIABLE_tableViewIdentifier___ViewModelInputs { get }
+    var outputs: ___VARIABLE_tableViewIdentifier___ViewModelOutputs { get }
 }
 
-public class ___VARIABLE_tableViewIdentifier___TableViewModel: ___VARIABLE_tableViewIdentifier___TableViewModelType, ___VARIABLE_tableViewIdentifier___TableViewModelInputs, ___VARIABLE_tableViewIdentifier___TableViewModelOutputs {
+public class ___VARIABLE_tableViewIdentifier___ViewModel: ___VARIABLE_tableViewIdentifier___ViewModelType, ___VARIABLE_tableViewIdentifier___ViewModelInputs, ___VARIABLE_tableViewIdentifier___ViewModelOutputs {
     init() {
         cells = configureWithTextProperty.signal.skipNil()
     }
@@ -41,6 +41,6 @@ public class ___VARIABLE_tableViewIdentifier___TableViewModel: ___VARIABLE_table
 
     public let cells: Signal<[String], NoError>
 
-    public var inputs: ___VARIABLE_tableViewIdentifier___TableViewModelInputs { return self }
-    public var outputs: ___VARIABLE_tableViewIdentifier___TableViewModelOutputs { return self }
+    public var inputs: ___VARIABLE_tableViewIdentifier___ViewModelInputs { return self }
+    public var outputs: ___VARIABLE_tableViewIdentifier___ViewModelOutputs { return self }
 }

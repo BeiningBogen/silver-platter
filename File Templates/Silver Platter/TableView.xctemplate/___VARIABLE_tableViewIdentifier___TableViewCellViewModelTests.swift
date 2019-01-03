@@ -13,9 +13,9 @@ import Result
 
 @testable import ___PROJECTNAME___Framework
 
-class ___VARIABLE_cellIdentifier___CellViewModelTests: XCTestCase {
+class ___VARIABLE_tableViewCell___ViewModelTests: XCTestCase {
 
-    let viewModel = ___VARIABLE_cellIdentifier___CellViewModel()
+    let viewModel = ___VARIABLE_tableViewCell___ViewModel()
 
     override func setUp() {
         super.setUp()

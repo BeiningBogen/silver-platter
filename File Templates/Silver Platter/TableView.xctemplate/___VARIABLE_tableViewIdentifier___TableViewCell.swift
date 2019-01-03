@@ -11,12 +11,12 @@ import ReactiveCocoa
 import ReactiveSwift
 import Cartography
 
-class ___VARIABLE_cellIdentifier___Cell: UITableViewCell, ValueCell {
+class ___VARIABLE_tableViewCell___: UITableViewCell, ValueCell {
 
-    static var defaultReusableId: String = String.init(describing: ___VARIABLE_cellIdentifier___Cell.self)
+    static var defaultReusableId: String = String.init(describing: ___VARIABLE_tableViewCell___.self)
     typealias Value = ___VARIABLE_cellType___
 
-    let viewModel = ___VARIABLE_cellIdentifier___CellViewModel()
+    let viewModel = ___VARIABLE_tableViewCell___ViewModel()
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

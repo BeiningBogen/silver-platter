@@ -13,11 +13,11 @@ import ReactiveSwift
 import Result
 import Cartography
 
-final class ___VARIABLE_tableViewIdentifier___TableViewController: UIViewController {
+final class ___VARIABLE_tableViewIdentifier___ViewController: UIViewController {
     var tableView:UITableView!
 
-    let viewModel = ___VARIABLE_tableViewIdentifier___TableViewModel()
-    let dataSource = ___VARIABLE_tableViewIdentifier___TableViewDataSource()
+    let viewModel = ___VARIABLE_tableViewIdentifier___ViewModel()
+    let dataSource = ___VARIABLE_tableViewIdentifier___DataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ final class ___VARIABLE_tableViewIdentifier___TableViewController: UIViewControl
         tableView = UITableView.init(frame: .zero)
         view.addSubview(tableView)
 
-        tableView.register(___VARIABLE_cellIdentifier___Cell.self, forCellReuseIdentifier: ___VARIABLE_cellIdentifier___Cell.defaultReusableId)
+        tableView.register(___VARIABLE_tableViewCell___.self, forCellReuseIdentifier: ___VARIABLE_tableViewCell___.defaultReusableId)
 
         tableView.delegate = self
         tableView.dataSource = dataSource
@@ -59,7 +59,7 @@ final class ___VARIABLE_tableViewIdentifier___TableViewController: UIViewControl
     }
 }
 
-extension ___VARIABLE_tableViewIdentifier___TableViewController : UITableViewDelegate {
+extension ___VARIABLE_tableViewIdentifier___ViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }

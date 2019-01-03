@@ -35,7 +35,7 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_tableViewIdentifier___TableViewController</string>
+			<string>___VARIABLE_tableViewIdentifier___ViewController</string>
 			<key>Description</key>
 			<string>The table view controller name</string>
 			<key>Identifier</key>
@@ -51,7 +51,7 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_tableViewIdentifier___TableViewModel</string>
+			<string>___VARIABLE_tableViewIdentifier___ViewModel</string>
 			<key>Description</key>
 			<string>The view model source name</string>
 			<key>Identifier</key>
@@ -208,7 +208,7 @@
 
 
 
-		<dict>
+		<!-- <dict>
 			<key>Description</key>
 			<string>Cell</string>
 			<key>Identifier</key>
@@ -261,7 +261,7 @@
 			<string>static</string>
 			<key>NotPersisted</key>
 			<true/>
-		</dict>
+		</dict> -->
 		<dict>
 			<key>Default</key>
 			<string>String</string>

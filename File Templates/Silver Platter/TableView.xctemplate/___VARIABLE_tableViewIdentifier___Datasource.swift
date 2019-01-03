@@ -13,11 +13,11 @@ import ReactiveSwift
 class ___VARIABLE_tableViewIdentifier___TableViewDataSource: ValueCellDataSource {
 
     internal func loadData(examples: [String]) {
-        set(values: examples, cellClass: ___VARIABLE_cellIdentifier___Cell.self, inSection: 0)
+        set(values: examples, cellClass: ___VARIABLE_tableViewCell___.self, inSection: 0)
     }
 
     override func configureCell(tableCell cell: UITableViewCell, withValue value: Any) {
-        if let cell = cell as? ___VARIABLE_cellIdentifier___Cell {
+        if let cell = cell as? ___VARIABLE_tableViewCell___ {
             if let value = value as? String {
                 cell.configureWith(value: value)
             }
