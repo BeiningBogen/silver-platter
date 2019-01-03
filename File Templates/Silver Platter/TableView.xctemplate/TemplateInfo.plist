@@ -99,6 +99,116 @@
 		</dict>
 		<!--Cell-->
 		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_tableViewIdentifier___TableViewCell</string>
+			<key>Description</key>
+			<string>The table view cell's name</string>
+			<key>Identifier</key>
+			<string>tableViewCell</string>
+			<key>Name</key>
+			<string>Table View Cell Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_tableViewIdentifier___TableViewCellViewModel</string>
+			<key>Description</key>
+			<string>The table view cell's name</string>
+			<key>Identifier</key>
+			<string>tableViewCellViewModel</string>
+			<key>Name</key>
+			<string>Table View Cell View Model Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_tableViewIdentifier___TableViewCellViewModelTests</string>
+			<key>Description</key>
+			<string>The table view cell's name</string>
+			<key>Identifier</key>
+			<string>tableViewCellViewModel</string>
+			<key>Name</key>
+			<string>Table View Cell View Model Tests Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<dict>
 			<key>Description</key>
 			<string>Cell</string>
 			<key>Identifier</key>
