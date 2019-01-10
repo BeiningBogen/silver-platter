@@ -9,16 +9,18 @@
 import XCTest
 import ReactiveCocoa
 import ReactiveSwift
+import Result
 
 class ___VARIABLE_viewModelNameIdentifier___Tests: XCTestCase {
 
     let viewModel = ___VARIABLE_viewModelName___()
 
-    //Place output fields
+    // let isLoading = TestObserver<Bool, NoError>()
 
     override func setUp() {
         super.setUp()
 
+        //example:  self.vm.outputs.isLoading.observe(self.isLoading.observer)
         //Observe output fields
     }
 
