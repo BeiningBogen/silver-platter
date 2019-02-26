@@ -2,6 +2,7 @@ import UIKit
 import CoreData
 import ___PROJECTNAME___Framework
 import ___PROJECTNAME___Api
+import NSLogger
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -11,7 +12,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         /*Do not run the application when the tests are running.*/
         if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil { return true }
-
+        
+        LoggerSetupBonjourForBuildUser();
+        
+        Logger.shared.log(.app, .info, "Launching the app...")
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let splitViewController =  UISplitViewController()
 
