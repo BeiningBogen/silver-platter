@@ -35,6 +35,10 @@ echo "Copying xcode template to $PROJECTDIR"
 #Copy procedure
 mkdir $PROJECTDIR
 
+# Copy github settings
+mkdir $PROJECTDIR/'.github'
+cp -r './.github/' $PROJECTDIR/'.github'
+
 #Main target
 cp -r $EXAMPLEPROJECT/___PROJECTNAME___ $PROJECTDIR/$PROJECTNAME
 
